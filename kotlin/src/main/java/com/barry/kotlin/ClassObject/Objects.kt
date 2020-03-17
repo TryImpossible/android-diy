@@ -31,6 +31,6 @@ class C1 {
 
     fun bar() {
         var x1 = foo().x
-        var x2 = publicFoo().x
+//        var x2 = publicFoo().x
     }
 }
