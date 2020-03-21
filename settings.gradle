@@ -1,3 +1,4 @@
 include ':app', ':java', ':kotlin', ':coordinatorlayout'
 rootProject.name='Android-Notes'
 include ':draw9patch'
+include ':eventdispatch'
