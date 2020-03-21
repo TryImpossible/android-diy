@@ -10,32 +10,17 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <com.google.android.material.appbar.CollapsingToolbarLayout
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:contentScrim="@color/colorPrimary"
+            android:layout_height="?android:attr/actionBarSize"
+            android:background="@color/colorPrimary"
+            android:minHeight="20dp"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark"
+            app:layout_collapseMode="pin"
             app:layout_scrollFlags="scroll|enterAlways|enterAlwaysCollapsed"
-            app:statusBarScrim="@android:color/transparent"
-            app:titleEnabled="false"
-            app:toolbarId="@id/toolbar">
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="200dp"
-                android:background="@color/colorPrimaryDark"
-                app:layout_collapseMode="parallax"
-                app:layout_collapseParallaxMultiplier="0.7" />
-
-            <androidx.appcompat.widget.Toolbar
-                android:id="@+id/toolbar"
-                android:layout_width="match_parent"
-                android:layout_height="?android:attr/actionBarSize"
-                android:background="@color/colorPrimary"
-                android:theme="@style/ThemeOverlay.AppCompat.Dark"
-                app:layout_collapseMode="pin"
-                app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
-                app:title="标题" />
-        </com.google.android.material.appbar.CollapsingToolbarLayout>
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            app:title="标题" />
     </com.google.android.material.appbar.AppBarLayout>
 
     <androidx.core.widget.NestedScrollView

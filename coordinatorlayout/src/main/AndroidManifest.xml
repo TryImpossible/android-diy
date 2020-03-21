@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".behavior.ZoomBehaviorActivity"></activity>
+        <activity android:name=".scrollFlags.CollapsingToolbarLayoutActivity"></activity>
+        <activity android:name=".behavior.ZoomBehaviorActivity" />
         <activity android:name=".scrollFlags.SnapActivity" />
         <activity android:name=".scrollFlags.EnterAlwaysCollapsedActivity" />
         <activity android:name=".scrollFlags.ExitUntilCollapsedActivity" />
