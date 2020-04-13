@@ -1,4 +1,9 @@
 <resources>
     <string name="app_name">coordinatorLayout</string>
     <string name="test_text">文字内容\n\n文字内容\n\n文字内容\n\n文字内容\n\n文字内容\n\n文字内容\n\n文字内容\n\n文字内容\n\n文字内容\n\n文字内容\n\n文字内容\n\n文字内容\n\n文字内容\n\n文字内容\n\n文字内容\n\n文字内容\n\n文字内容\n\n文字内容\n\n文字内容\n\n文字内容\n\n文字内容\n\n文字内容\n\n文字内容\n\n文字内容\n\n文字内容\n\n文字内容\n\n文字内容\n\n文字内容\n\n文字内容\n\n文字内容\n\n文字内容\n\n文字内容\n\n文字内容\n\n文字内容\n\n文字内容\n\n文字内容\n\n文字内容\n\n文字内容\n\n文字内容\n\n文字内容\n\n文字内容\n文字内容\n\n文字内容\n\n文字内容\n\n文字内容\n\n文字内容\n\n文字内容\n\n文字内容\n\n文字内容\n\n文字内容\n\n文字内容\n\n文字内容\n\n文字内容\n\n文字内容\n\n文字内容\n\n文字内容\n\n文字内容\n\n文字内容\n\n文字内容\n\n文字内容\n\n文字内容\n\n文字内容\n\n文字内容\n\n文字内容\n\n文字内容\n\n文字内容\n\n文字内容\n\n文字内容\n\n文字内容\n\n文字内容\n\n文字内容\n\n文字内容\n\n文字内容\n\n文字内容\n\n文字内容\n\n文字内容\n\n文字内容\n\n文字内容\n\n文字内容\n\n文字内容\n\n文字内容\n\n文字内容\n\n文字内容\n\n文字内容\n\n文字内容\n\n文字内容\n\n文字内容\n\n文字内容\n\n文字内容\n\n文字内容\n\n文字内容\n\n文字内容\n\n文字内容\n\n文字内容\n\n文字内容\n\n文字内容\n\n文字内容\n\n文字内容\n文字内容\n\n文字内容\n\n文字内容\n\n文字内容\n\n文字内容\n\n文字内容\n\n文字内容\n\n文字内容\n\n文字内容\n\n文字内容\n\n文字内容\n\n文字内容\n\n文字内容\n\n文字内容\n\n文字内容\n\n文字内容\n\n文字内容\n\n文字内容\n\n文字内容\n\n文字内容\n\n文字内容\n\n文字内容\n\n文字内容\n\n文字内容\n\n文字内容\n\n文字内容\n\n文字内容\n\n文字内容\n\n文字内容\n\n文字内容\n\n文字内容\n\n文字内容\n\n文字内容\n\n文字内容\n\n文字内容\n\n文字内容\n\n文字内容\n\n文字内容\n\n文字内容\n\n文字内容\n\n文字内容\n\n文字内容\n\n文字内容\n\n文字内容\n\n文字内容\n\n文字内容\n</string>
+    <string name="title_activity_zhi_hu">ZhiHuActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="bottom_bar_behavior">com.barry.coordinatorlayout.zhihu.BottomBarBehavior</string>
 </resources>

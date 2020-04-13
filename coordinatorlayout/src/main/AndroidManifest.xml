@@ -9,7 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".scrollFlags.CollapsingToolbarLayoutActivity"></activity>
+        <activity
+            android:name=".zhihu.ZhiHuActivity"
+            android:label="@string/title_activity_zhi_hu"></activity>
+        <activity android:name=".scrollFlags.CollapsingToolbarLayoutActivity" />
         <activity android:name=".behavior.ZoomBehaviorActivity" />
         <activity android:name=".scrollFlags.SnapActivity" />
         <activity android:name=".scrollFlags.EnterAlwaysCollapsedActivity" />
