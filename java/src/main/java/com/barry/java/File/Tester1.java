@@ -3,7 +3,7 @@ package com.barry.java.File;
 import java.io.File;
 import java.io.IOException;
 
-public class Test1 {
+public class Tester1 {
     public static void main(String args[]) throws IOException {
         String path = String.format("C:%sUsers%stry%sDesktop%sfile%s1.txt", File.separator, File.separator, File.separator, File.separator, File.separator
         );

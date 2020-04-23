@@ -6,7 +6,7 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 
-public class Test {
+public class Tester1 {
     public static void main(String args[]) {
         forMap();
     }
