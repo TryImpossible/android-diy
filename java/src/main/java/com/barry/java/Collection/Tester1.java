@@ -1,6 +1,8 @@
 package com.barry.java.Collection;
 
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
@@ -67,5 +69,6 @@ public class Tester1 {
         for (String v : map.values()) {
             System.out.println("value = " + v);
         }
+
     }
 }
