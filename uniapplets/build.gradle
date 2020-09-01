@@ -1,16 +1,26 @@
 apply plugin: 'com.android.application'
 
+//必须配置
+def mfph = [
+        //包名
+        "apk.applicationId" : "com.barry.uniapplets",
+]
+
 android {
     compileSdkVersion 30
     buildToolsVersion "30.0.0"
 
     defaultConfig {
         applicationId "com.barry.uniapplets"
-        minSdkVersion 16
-        targetSdkVersion 30
+        minSdkVersion 19
+        targetSdkVersion 26 //最高28最优26 设置值域超过28可能在android10以上手机出现白屏问题。
         versionCode 1
         versionName "1.0"
-
+        multiDexEnabled true
+        manifestPlaceholders = mfph
+        ndk {
+            abiFilters 'x86','armeabi-v7a',"arm64-v8a" //不支持armeabi
+        }
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
@@ -20,14 +30,43 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+
+    //此处配置必须添加 否则无法正确运行
+    aaptOptions {
+        additionalParameters '--auto-add-overlay'
+        //noCompress 'foo', 'bar'
+        ignoreAssetsPattern "!.svn:!.git:.*:!CVS:!thumbs.db:!picasa.ini:!*.scc:*~"
+    }
+}
+
+//导入aar需要的配置
+repositories {
+    flatDir {
+        dirs 'libs'
+    }
 }
 
 dependencies {
-    implementation fileTree(dir: "libs", include: ["*.jar"])
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation fileTree(include: ['*.aar'], dir: 'libs')
     implementation 'androidx.appcompat:appcompat:1.2.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.0.1'
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+
+    implementation 'com.android.support:recyclerview-v7:27.1.0' //必须集成
+    implementation 'com.android.support:support-v4:27.1.0' //必须集成
+    implementation 'com.android.support:appcompat-v7:27.1.0' //必须集成
+    implementation 'com.alibaba:fastjson:1.1.46.android' //必须集成
+    implementation 'com.facebook.fresco:fresco:1.13.0'//必须集成
+    implementation 'com.facebook.fresco:animated-gif:1.13.0'//必须集成
+    implementation 'com.github.bumptech.glide:glide:4.9.0'//必须集成
 
 }
