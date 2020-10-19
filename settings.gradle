@@ -1,7 +1,7 @@
 include ':agentweb'
 include ':uniapplets'
 include ':app', ':java', ':kotlin', ':coordinatorlayout'
-rootProject.name='Android-Notes'
+rootProject.name='android-diy'
 include ':draw9patch'
 include ':eventdispatch'
 include ':recyclerview'
