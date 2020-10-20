@@ -1,4 +1,4 @@
-package com.barry.designpartern.Singleton;
+package com.barry.designpartern.singleton;
 
 public class Singleton3 {
     private static Singleton3 instance = new Singleton3();

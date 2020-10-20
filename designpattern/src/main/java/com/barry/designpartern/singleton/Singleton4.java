@@ -1,4 +1,4 @@
-package com.barry.designpartern.Singleton;
+package com.barry.designpartern.singleton;
 
 public class Singleton4 {
     private static volatile Singleton4 instance;

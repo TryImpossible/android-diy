@@ -1,4 +1,4 @@
-package com.barry.designpartern.Singleton;
+package com.barry.designpartern.singleton;
 
 public class SingleObject {
     // 创建一个SingleObject的对象

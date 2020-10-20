@@ -1,4 +1,4 @@
-package com.barry.designpartern.Singleton;
+package com.barry.designpartern.singleton;
 
 public enum  Singleton6 {
     INSTANCE;

@@ -1,4 +1,4 @@
-package com.barry.designpartern.Singleton;
+package com.barry.designpartern.singleton;
 
 public class SingletonPatternDemo {
     public static void main(String[] args) {
