@@ -1,3 +1,4 @@
+include ':customview'
 include ':agentweb'
 include ':uniapplets'
 include ':app', ':java', ':kotlin', ':coordinatorlayout'
