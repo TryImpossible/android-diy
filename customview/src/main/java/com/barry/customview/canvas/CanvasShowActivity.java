@@ -17,5 +17,6 @@ public class CanvasShowActivity extends AppCompatActivity {
         findViewById(R.id.btn_draw_axis).setOnClickListener(view -> startActivity(new Intent(this, DrawAxisActivity.class)));
         findViewById(R.id.btn_draw_argb).setOnClickListener(view -> startActivity(new Intent(this, DrawARGBActivity.class)));
         findViewById(R.id.btn_draw_text).setOnClickListener(view -> startActivity(new Intent(this, DrawTextActivity.class)));
+        findViewById(R.id.btn_draw_point).setOnClickListener(view -> startActivity(new Intent(this, DrawPointActivity.class)));
     }
 }

@@ -3,6 +3,7 @@ package com.barry.customview.canvas;
 import android.graphics.Canvas;
 import android.graphics.Paint;
 import android.graphics.Rect;
+import android.text.TextPaint;
 
 public class DrawTextActivity extends CanvasActivity {
     @Override
@@ -10,7 +11,7 @@ public class DrawTextActivity extends CanvasActivity {
         int w = canvas.getWidth();
         int halfW = w / 2;
 
-        Paint paint = new Paint();
+        TextPaint paint = new TextPaint();
         paint.setStyle(Paint.Style.FILL_AND_STROKE);
         paint.setTextSize(18 * mDensity);
         paint.setAntiAlias(true);

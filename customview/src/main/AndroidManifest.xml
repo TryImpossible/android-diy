@@ -9,6 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".canvas.DrawPointActivity" />
         <activity android:name=".canvas.DrawTextActivity" />
         <activity android:name=".canvas.DrawARGBActivity" />
         <activity android:name=".canvas.DrawAxisActivity" />

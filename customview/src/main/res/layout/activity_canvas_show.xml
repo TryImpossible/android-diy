@@ -31,5 +31,12 @@
             android:text="drawText"
             android:textAllCaps="false" />
 
+        <Button
+            android:id="@+id/btn_draw_point"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="drawPoint"
+            android:textAllCaps="false" />
+
     </LinearLayout>
 </ScrollView>
