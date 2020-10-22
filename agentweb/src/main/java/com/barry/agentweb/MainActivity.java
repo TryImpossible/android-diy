@@ -77,6 +77,7 @@ public class MainActivity extends AppCompatActivity {
         LinearLayout container = findViewById(R.id.container);
         AgentWeb mAgentWeb = AgentWeb.with(this)
                 .setAgentWebParent((LinearLayout) container, new LinearLayout.LayoutParams(-1, -1))
+                .setCustomIndicator()
                 .useDefaultIndicator()
                 .setWebChromeClient(mWebChromeClient)
                 .createAgentWeb()
