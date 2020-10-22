@@ -17,5 +17,19 @@
             android:layout_height="wrap_content"
             android:text="绘制坐标系" />
 
+        <Button
+            android:id="@+id/btn_draw_argb"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="drawARGB"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/btn_draw_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="drawText"
+            android:textAllCaps="false" />
+
     </LinearLayout>
 </ScrollView>
