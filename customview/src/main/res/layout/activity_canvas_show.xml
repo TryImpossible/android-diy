@@ -79,5 +79,12 @@
             android:layout_height="wrap_content"
             android:text="drawPath"
             android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/btn_draw_bitmap"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="drawBitmap"
+            android:textAllCaps="false" />
     </LinearLayout>
 </ScrollView>
