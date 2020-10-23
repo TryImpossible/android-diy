@@ -8,13 +8,13 @@ import android.text.TextPaint;
 public class DrawTextActivity extends CanvasActivity {
     @Override
     void draw(Canvas canvas) {
-        int w = canvas.getWidth();
-        int halfW = w / 2;
-
         TextPaint paint = new TextPaint();
         paint.setStyle(Paint.Style.FILL_AND_STROKE);
         paint.setTextSize(18 * mDensity);
         paint.setAntiAlias(true);
+
+        int w = canvas.getWidth();
+        int halfW = w / 2;
 
         Rect rect = new Rect();
         paint.getTextBounds("正常绘制文本", 0, "正常绘制文本".length(), rect);

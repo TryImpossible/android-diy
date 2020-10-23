@@ -7,11 +7,11 @@ import android.graphics.Rect;
 public class DrawRectActivity extends CanvasActivity {
     @Override
     void draw(Canvas canvas) {
-        int w = canvas.getWidth();
-        int h = canvas.getHeight();
-
         Paint paint = new Paint();
         paint.setStyle(Paint.Style.FILL);
+
+        int w = canvas.getWidth();
+        int h = canvas.getHeight();
 
         // 默认画笔是黑色
         Rect rect1 = new Rect(10, 10, w / 3, h / 3);

@@ -6,14 +6,14 @@ import android.graphics.Paint;
 public class DrawLineActivity extends CanvasActivity {
     @Override
     void draw(Canvas canvas) {
-        int w = canvas.getWidth();
-        int h = canvas.getHeight();
-        float translateY = 30 * mDensity;
-
         Paint paint = new Paint();
         paint.setStyle(Paint.Style.FILL);
         paint.setAntiAlias(true);
 //        paint.setStrokeWidth(2 * mDensity);
+
+        int w = canvas.getWidth();
+        int h = canvas.getHeight();
+        float translateY = 30 * mDensity;
 
 //        canvas.save();
         canvas.drawLine(0, 0, w, translateY, paint);

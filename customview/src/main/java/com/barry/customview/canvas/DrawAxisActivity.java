@@ -6,13 +6,13 @@ import android.graphics.Paint;
 public class DrawAxisActivity extends CanvasActivity {
 
     public void draw(Canvas canvas) {
-        int w = canvas.getWidth();
-        int h = canvas.getHeight();
-
         Paint paint = new Paint();
         paint.setStyle(Paint.Style.STROKE);
         paint.setStrokeCap(Paint.Cap.ROUND);
         paint.setStrokeWidth(6 * mDensity);
+
+        int w = canvas.getWidth();
+        int h = canvas.getHeight();
 
         // 用绿色画x轴，用蓝色画y轴
 
