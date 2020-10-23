@@ -1,16 +1,11 @@
 package com.barry.customview.canvas;
 
-import androidx.appcompat.app.AppCompatActivity;
-
-import android.graphics.Bitmap;
 import android.graphics.Canvas;
-import android.graphics.Color;
-import android.graphics.Paint;
 import android.os.Bundle;
-import android.util.DisplayMetrics;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.LinearLayout;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.barry.customview.R;
 
@@ -25,9 +20,7 @@ public abstract class CanvasActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_canvas);
 
-        DisplayMetrics dm = new DisplayMetrics();
-        getWindowManager().getDefaultDisplay().getRealMetrics(dm);
-        mDensity = dm.density;
+        mDensity = getResources().getDisplayMetrics().density;
 
         mCanvasView = new View(this) {
             @Override
@@ -36,7 +29,7 @@ public abstract class CanvasActivity extends AppCompatActivity {
                 CanvasActivity.this.draw(canvas);
             }
         };
-        ((LinearLayout)findViewById(R.id.container)).addView(mCanvasView);
+        ((LinearLayout) findViewById(R.id.container)).addView(mCanvasView);
     }
 
     abstract void draw(Canvas canvas);

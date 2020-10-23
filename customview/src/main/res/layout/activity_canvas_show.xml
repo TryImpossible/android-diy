@@ -97,7 +97,14 @@
             android:id="@+id/btn_draw_love"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="爱心"
+            android:text="画爱心"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/btn_draw_ruler"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="画尺子"
             android:textAllCaps="false" />
     </LinearLayout>
 </ScrollView>
