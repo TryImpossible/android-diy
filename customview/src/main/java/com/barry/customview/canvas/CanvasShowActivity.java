@@ -21,5 +21,6 @@ public class CanvasShowActivity extends AppCompatActivity {
         findViewById(R.id.btn_draw_line).setOnClickListener(view -> startActivity(new Intent(this, DrawLineActivity.class)));
         findViewById(R.id.btn_draw_rect).setOnClickListener(view -> startActivity(new Intent(this, DrawRectActivity.class)));
         findViewById(R.id.btn_draw_circle).setOnClickListener(view -> startActivity(new Intent(this, DrawCircleActivity.class)));
+        findViewById(R.id.btn_draw_oval).setOnClickListener(view -> startActivity(new Intent(this, DrawOvalActivity.class)));
     }
 }

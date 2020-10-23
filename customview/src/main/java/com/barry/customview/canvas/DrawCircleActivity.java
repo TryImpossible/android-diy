@@ -17,6 +17,18 @@ public class DrawCircleActivity extends CanvasActivity {
         int D = h / (count + 1);
         int R = D / 2;
 
+        canvas.save();
+        canvas.drawLine(0, D, w, D, paint);
+        canvas.restore();
+
+        canvas.save();
+        canvas.drawLine(0, 2 * D, w, 2 * D, paint);
+        canvas.restore();
+
+        canvas.save();
+        canvas.drawLine(0, 3 * D, w, 3 * D, paint);
+        canvas.restore();
+
         // 绘制圆
         canvas.translate(0, D / (count + 1));
         canvas.drawCircle(halfW, R, R, paint);
@@ -34,7 +46,7 @@ public class DrawCircleActivity extends CanvasActivity {
         canvas.translate(0, D + D / (count + 1));
         paint.setColor(0xff8bc5ba); // 设置颜色
         paint.setStyle(Paint.Style.STROKE);
-        float strokeWidth = (float)(R * 0.25);
+        float strokeWidth = (float) (R * 0.25);
         paint.setStrokeWidth(strokeWidth);
         canvas.drawCircle(halfW, R, R, paint);
     }
