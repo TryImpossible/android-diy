@@ -12,6 +12,12 @@
         android:orientation="vertical">
 
         <Button
+            android:id="@+id/btn_translate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="位移" />
+
+        <Button
             android:id="@+id/btn_draw_axis"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
