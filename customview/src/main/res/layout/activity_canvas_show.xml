@@ -65,5 +65,12 @@
             android:layout_height="wrap_content"
             android:text="drawOval"
             android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/btn_draw_arc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="drawArc"
+            android:textAllCaps="false" />
     </LinearLayout>
 </ScrollView>
