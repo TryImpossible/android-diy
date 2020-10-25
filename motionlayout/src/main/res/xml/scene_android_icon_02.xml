@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:motion="http://schemas.android.com/apk/res-auto">
+
+    <Transition
+        app:constraintSetEnd="@id/end"
+        app:constraintSetStart="@id/start">
+
+        <KeyFrameSet>
+            <KeyPosition
+                app:framePosition="50"
+                app:keyPositionType="parentRelative"
+                app:motionTarget="@id/ic_android"
+                app:percentY="0.5" />
+            <!--apply other animation attributes-->
+            <!--前半段的动画效果：逆时针旋转一圈，同时放大一倍-->
+            <KeyAttribute
+                android:rotation="-360"
+                android:scaleX="2.0"
+                android:scaleY="2.0"
+                app:framePosition="50"
+                app:motionTarget="@id/ic_android" />
+            <!--后半段的动画效果：逆时针旋转一圈，同时变回原样-->
+            <KeyAttribute
+                android:rotation="-720"
+                app:framePosition="100"
+                app:motionTarget="@id/ic_android" />
+            <!--延迟动画——0-85过程中将透明度一直维持在0.0-->
+<!--            <KeyAttribute-->
+<!--                android:alpha="0.0"-->
+<!--                app:framePosition="85"-->
+<!--                app:motionTarget="@id/tipText" />-->
+        </KeyFrameSet>
+
+        <OnSwipe
+            app:touchAnchorId="@id/ic_android"
+            motion:dragDirection="dragRight"
+            motion:touchAnchorSide="bottom" />
+    </Transition>
+
+    <ConstraintSet android:id="@+id/start">
+        <Constraint
+            android:id="@+id/ic_android"
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:layout_marginBottom="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent" />
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/end">
+        <Constraint
+            android:id="@+id/ic_android"
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:layout_marginBottom="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent" />
+    </ConstraintSet>
+</MotionScene>

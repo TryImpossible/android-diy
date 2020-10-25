@@ -12,5 +12,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         findViewById(R.id.btn_simple_motion).setOnClickListener((view) -> startActivity(new Intent(this, SimpleMotionActivity.class)));
+        findViewById(R.id.btn_android_motion1).setOnClickListener((view) -> startActivity(new Intent(this, AndroidIconMotion01Activity.class)));
+        findViewById(R.id.btn_android_motion2).setOnClickListener((view) -> startActivity(new Intent(this, AndroidIconMotion02Activity.class)));
     }
 }

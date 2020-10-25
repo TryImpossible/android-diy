@@ -14,4 +14,18 @@
         android:text="MotionLayout简单使用"
         android:textAllCaps="false" />
 
+    <Button
+        android:id="@+id/btn_android_motion1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Android图标运动布局1"
+        android:textAllCaps="false" />
+
+    <Button
+        android:id="@+id/btn_android_motion2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Android图标运动布局2"
+        android:textAllCaps="false" />
+
 </LinearLayout>
