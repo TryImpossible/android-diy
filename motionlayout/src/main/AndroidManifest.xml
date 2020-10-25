@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Androiddiy">
-        <activity android:name=".AndroidIconMotion02Activity"></activity>
+        <activity android:name=".CollapsingToolbarMotionActivity"></activity>
+        <activity android:name=".AndroidIconMotion02Activity" />
         <activity android:name=".AndroidIconMotion01Activity" />
         <activity android:name=".SimpleMotionActivity" />
         <activity android:name=".MainActivity">

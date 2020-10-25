@@ -28,4 +28,10 @@
         android:text="Android图标运动布局2"
         android:textAllCaps="false" />
 
+    <Button
+        android:id="@+id/btn_collapsing_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="自定义CollapsingToolbar"
+        android:textAllCaps="false" />
 </LinearLayout>

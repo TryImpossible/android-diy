@@ -14,5 +14,6 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.btn_simple_motion).setOnClickListener((view) -> startActivity(new Intent(this, SimpleMotionActivity.class)));
         findViewById(R.id.btn_android_motion1).setOnClickListener((view) -> startActivity(new Intent(this, AndroidIconMotion01Activity.class)));
         findViewById(R.id.btn_android_motion2).setOnClickListener((view) -> startActivity(new Intent(this, AndroidIconMotion02Activity.class)));
+        findViewById(R.id.btn_collapsing_toolbar).setOnClickListener((view) -> startActivity(new Intent(this, CollapsingToolbarMotionActivity.class)));
     }
 }
