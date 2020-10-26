@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import com.barry.animation.tween.AlphaActivity
+import com.barry.animation.tween.RotateActivity
 import com.barry.animation.tween.ScaleActivity
 import com.barry.animation.tween.TranslateActivity
 
@@ -20,6 +21,9 @@ class MainActivity : AppCompatActivity() {
         }
         findViewById<Button>(R.id.btn_scale).setOnClickListener {
             startActivity(Intent(this, ScaleActivity().javaClass))
+        }
+        findViewById<Button>(R.id.btn_rotate).setOnClickListener {
+            startActivity(Intent(this, RotateActivity().javaClass))
         }
     }
 }
