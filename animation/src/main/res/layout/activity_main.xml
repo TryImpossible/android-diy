@@ -38,6 +38,13 @@
             android:layout_height="wrap_content"
             android:text="Rotate动画"
             android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/btn_ani_set"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="AnimationSet联合动画"
+            android:textAllCaps="false" />
     </LinearLayout>
 
 </ScrollView>

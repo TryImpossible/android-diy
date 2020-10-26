@@ -4,10 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
-import com.barry.animation.tween.AlphaActivity
-import com.barry.animation.tween.RotateActivity
-import com.barry.animation.tween.ScaleActivity
-import com.barry.animation.tween.TranslateActivity
+import com.barry.animation.tween.*
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -24,6 +21,9 @@ class MainActivity : AppCompatActivity() {
         }
         findViewById<Button>(R.id.btn_rotate).setOnClickListener {
             startActivity(Intent(this, RotateActivity().javaClass))
+        }
+        findViewById<Button>(R.id.btn_ani_set).setOnClickListener {
+            startActivity(Intent(this, AniSetActivity().javaClass))
         }
     }
 }
