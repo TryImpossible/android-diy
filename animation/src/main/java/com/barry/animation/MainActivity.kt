@@ -4,6 +4,8 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import com.barry.animation.tween.AlphaActivity
+import com.barry.animation.tween.ScaleActivity
 import com.barry.animation.tween.TranslateActivity
 
 class MainActivity : AppCompatActivity() {
@@ -15,6 +17,9 @@ class MainActivity : AppCompatActivity() {
         }
         findViewById<Button>(R.id.btn_alpha).setOnClickListener {
             startActivity(Intent(this, AlphaActivity().javaClass))
+        }
+        findViewById<Button>(R.id.btn_scale).setOnClickListener {
+            startActivity(Intent(this, ScaleActivity().javaClass))
         }
     }
 }
