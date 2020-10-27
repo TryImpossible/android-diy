@@ -21,7 +21,7 @@ class TranslateActivity : AppCompatActivity() {
         findViewById<Button>(R.id.btn_code).setOnClickListener {
             val animation = TranslateAnimation(0.0f, 400f, 0f, 200f)
             animation.duration = 2000
-            animation.fillBefore = true
+            animation.fillAfter = true
 
             findViewById<TextView>(R.id.tv_demo).startAnimation(animation);
         }

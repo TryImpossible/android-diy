@@ -12,6 +12,13 @@
         android:orientation="vertical">
 
         <Button
+            android:id="@+id/btn_frame"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Frame动画"
+            android:textAllCaps="false" />
+
+        <Button
             android:id="@+id/btn_translate"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
