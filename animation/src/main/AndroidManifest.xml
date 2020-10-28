@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Androiddiy">
-        <activity android:name=".frame.FrameActivity"></activity>
+        <activity android:name=".interpolator.OfficialInterpolatorActivity"></activity>
+        <activity android:name=".frame.FrameActivity" />
         <activity android:name=".tween.AniSetActivity" />
         <activity android:name=".tween.RotateActivity" />
         <activity android:name=".tween.ScaleActivity" />

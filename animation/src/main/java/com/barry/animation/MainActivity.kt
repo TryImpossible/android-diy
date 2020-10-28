@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import com.barry.animation.frame.FrameActivity
+import com.barry.animation.interpolator.OfficialInterpolatorActivity
 import com.barry.animation.tween.*
 
 class MainActivity : AppCompatActivity() {
@@ -29,6 +30,9 @@ class MainActivity : AppCompatActivity() {
         }
         findViewById<Button>(R.id.btn_ani_set).setOnClickListener {
             startActivity(Intent(this, AniSetActivity().javaClass))
+        }
+        findViewById<Button>(R.id.btn_interpolator).setOnClickListener {
+            startActivity(Intent(this, OfficialInterpolatorActivity().javaClass))
         }
     }
 }

@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".interpolator.OfficialInterpolatorActivity">
+
+    <ImageView
+        android:id="@+id/iv_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/ic_launcher_round"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <Button
+        android:id="@+id/btn_accelerate"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="accelerate"
+        android:textAllCaps="false"
+        app:layout_constraintBottom_toTopOf="@id/btn_linear"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/btn_decelerate" />
+
+    <Button
+        android:id="@+id/btn_decelerate"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="6dp"
+        android:text="decelerate"
+        android:textAllCaps="false"
+        app:layout_constraintBottom_toBottomOf="@id/btn_accelerate"
+        app:layout_constraintLeft_toRightOf="@id/btn_accelerate"
+        app:layout_constraintRight_toLeftOf="@id/btn_accelerate_decelerate" />
+
+    <Button
+        android:id="@+id/btn_accelerate_decelerate"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="accelerate_decelerate"
+        android:textAllCaps="false"
+        app:layout_constraintBottom_toBottomOf="@id/btn_decelerate"
+        app:layout_constraintLeft_toRightOf="@id/btn_decelerate"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <Button
+        android:id="@+id/btn_linear"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="linear"
+        android:textAllCaps="false"
+        app:layout_constraintBottom_toTopOf="@id/btn_anticipate_overshoot"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/btn_anticipate" />
+
+    <Button
+        android:id="@+id/btn_anticipate"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="6dp"
+        android:text="anticipate"
+        android:textAllCaps="false"
+        app:layout_constraintBottom_toBottomOf="@id/btn_linear"
+        app:layout_constraintLeft_toRightOf="@id/btn_linear"
+        app:layout_constraintRight_toLeftOf="@id/btn_overshoot" />
+
+    <Button
+        android:id="@+id/btn_overshoot"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="overshoot"
+        android:textAllCaps="false"
+        app:layout_constraintBottom_toBottomOf="@id/btn_anticipate"
+        app:layout_constraintLeft_toRightOf="@id/btn_anticipate"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <Button
+        android:id="@+id/btn_anticipate_overshoot"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="anticipate_overshoot"
+        android:textAllCaps="false"
+        app:layout_constraintBottom_toTopOf="@id/btn_path"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/btn_bounce" />
+
+    <Button
+        android:id="@+id/btn_bounce"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="6dp"
+        android:text="bounce"
+        android:textAllCaps="false"
+        app:layout_constraintBottom_toBottomOf="@id/btn_anticipate_overshoot"
+        app:layout_constraintLeft_toRightOf="@id/btn_anticipate_overshoot"
+        app:layout_constraintRight_toLeftOf="@id/btn_cycle" />
+
+    <Button
+        android:id="@+id/btn_cycle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="cycle"
+        android:textAllCaps="false"
+        app:layout_constraintBottom_toBottomOf="@id/btn_bounce"
+        app:layout_constraintLeft_toRightOf="@id/btn_bounce"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <Button
+        android:id="@+id/btn_path"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="path"
+        android:textAllCaps="false"
+        app:layout_constraintBottom_toTopOf="@id/btn_linearOutSlowIn"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/btn_bounce" />
+
+    <Button
+        android:id="@+id/btn_fastOutLinearIn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="6dp"
+        android:text="fastOutLinearIn"
+        android:textAllCaps="false"
+        app:layout_constraintBottom_toBottomOf="@id/btn_path"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintLeft_toRightOf="@id/btn_path"
+        app:layout_constraintRight_toLeftOf="@id/btn_fastOutSlowInIn" />
+
+    <Button
+        android:id="@+id/btn_fastOutSlowInIn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="fastOutSlowInIn"
+        android:textAllCaps="false"
+        app:layout_constraintBottom_toBottomOf="@id/btn_fastOutLinearIn"
+        app:layout_constraintLeft_toRightOf="@id/btn_fastOutLinearIn"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <Button
+        android:id="@+id/btn_linearOutSlowIn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="linearOutSlowIn"
+        android:textAllCaps="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/btn_bounce" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
