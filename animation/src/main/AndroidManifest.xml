@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Androiddiy">
-        <activity android:name=".property.ObjectAnimatorActivity"></activity>
+        <activity android:name=".property.CustomAnimatorPropertyActivity"></activity>
+        <activity android:name=".property.ObjectAnimatorActivity" />
         <activity android:name=".property.ValueAnimatorActivity" />
         <activity android:name=".interpolator.CustomInterpolatorActivity" />
         <activity android:name=".interpolator.OfficialInterpolatorActivity" />

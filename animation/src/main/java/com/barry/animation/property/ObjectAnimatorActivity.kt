@@ -1,12 +1,11 @@
 package com.barry.animation.property
 
 import android.animation.ObjectAnimator
-import android.media.Image
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.animation.LinearInterpolator
 import android.widget.Button
 import android.widget.ImageView
+import androidx.appcompat.app.AppCompatActivity
 import com.barry.animation.R
 
 class ObjectAnimatorActivity : AppCompatActivity() {
