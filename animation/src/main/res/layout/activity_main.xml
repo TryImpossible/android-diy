@@ -67,6 +67,13 @@
             android:text="自定义动画插值器"
             android:textAllCaps="false" />
 
+        <Button
+            android:id="@+id/btn_value_animator"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="ValueAnimator"
+            android:textAllCaps="false" />
+
     </LinearLayout>
 
 </ScrollView>

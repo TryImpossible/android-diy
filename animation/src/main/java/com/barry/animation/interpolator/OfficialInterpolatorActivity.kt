@@ -1,12 +1,10 @@
 package com.barry.animation.interpolator
 
-import android.os.Build
 import android.os.Bundle
 import android.view.View
 import android.view.animation.*
 import android.widget.Button
 import android.widget.ImageView
-import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.animation.PathInterpolatorCompat
 import androidx.interpolator.view.animation.FastOutLinearInInterpolator

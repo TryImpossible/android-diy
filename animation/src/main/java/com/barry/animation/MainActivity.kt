@@ -7,6 +7,7 @@ import android.widget.Button
 import com.barry.animation.frame.FrameActivity
 import com.barry.animation.interpolator.CustomInterpolatorActivity
 import com.barry.animation.interpolator.OfficialInterpolatorActivity
+import com.barry.animation.property.ValueAnimatorActivity
 import com.barry.animation.tween.*
 
 class MainActivity : AppCompatActivity() {
@@ -37,6 +38,9 @@ class MainActivity : AppCompatActivity() {
         }
         findViewById<Button>(R.id.btn_custom_interpolator).setOnClickListener {
             startActivity(Intent(this, CustomInterpolatorActivity().javaClass))
+        }
+        findViewById<Button>(R.id.btn_value_animator).setOnClickListener {
+            startActivity(Intent(this, ValueAnimatorActivity().javaClass))
         }
     }
 }
