@@ -107,15 +107,25 @@
         android:textAllCaps="false"
         app:layout_constraintBottom_toBottomOf="@id/btn_ofMultiInt"
         app:layout_constraintLeft_toRightOf="@id/btn_ofMultiInt"
-        app:layout_constraintRight_toLeftOf="@id/btn_ofMultiInt_converter_evaluator" />
+        app:layout_constraintRight_toRightOf="parent" />
 
     <Button
-        android:id="@+id/btn_ofMultiInt_converter_evaluator"
+        android:id="@+id/btn_ofObject"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="ofMultiInt converter evaluator"
+        android:text="ofObject"
         android:textAllCaps="false"
-        app:layout_constraintBottom_toBottomOf="@id/btn_ofMultiInt_path"
-        app:layout_constraintLeft_toRightOf="@id/btn_ofMultiInt_path"
+        app:layout_constraintBottom_toTopOf="@id/btn_ofMultiInt"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/btn_ofPropertyValuesHolder" />
+
+    <Button
+        android:id="@+id/btn_ofPropertyValuesHolder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ofPropertyValuesHolder"
+        android:textAllCaps="false"
+        app:layout_constraintBottom_toBottomOf="@id/btn_ofObject"
+        app:layout_constraintLeft_toRightOf="@id/btn_ofObject"
         app:layout_constraintRight_toRightOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

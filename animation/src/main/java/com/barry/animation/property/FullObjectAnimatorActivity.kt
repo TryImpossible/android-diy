@@ -1,7 +1,8 @@
 package com.barry.animation.property
 
+import android.animation.Keyframe
 import android.animation.ObjectAnimator
-import android.animation.TypeConverter
+import android.animation.PropertyValuesHolder
 import android.animation.TypeEvaluator
 import android.graphics.Color
 import android.graphics.Path
@@ -114,7 +115,7 @@ class FullObjectAnimatorActivity : AppCompatActivity() {
             animator.start()
         }
         findViewById<Button>(R.id.btn_ofMultiInt).setOnClickListener {
-            val data = arrayOf(intArrayOf(1,9), intArrayOf(4,12))
+            val data = arrayOf(intArrayOf(1, 9), intArrayOf(4, 12))
             val animator = ObjectAnimator.ofMultiInt(myTextView, "muliText", data)
             animator.duration = 3000
             animator.repeatCount = 1
@@ -131,31 +132,67 @@ class FullObjectAnimatorActivity : AppCompatActivity() {
             animator.interpolator = LinearInterpolator()
             animator.start()
         }
-        findViewById<Button>(R.id.btn_ofMultiInt_converter_evaluator).setOnClickListener {
+        findViewById<Button>(R.id.btn_ofObject).setOnClickListener {
             class Point {
                 var x = 0
                 var y = 0
-            }
-//            class IntConverter(fromClass: Class<Point?>?, toClass: Class<IntArray?>?) : TypeConverter<Point?, IntArray?>(fromClass, toClass) {
-//                override fun convert(value: Point?): IntArray? {
-//                    return intArrayOf(value.x, value.y)
-//                }
-//            }
-//            class PointEvaluator : TypeEvaluator<Point> {
-//                override fun evaluate(fraction: Float, startValue: Point, endValue: Point): Point {
-//                    val startxInt: Int = startValue.getX()
-//                    val endxInt: Int = endValue.getX()
-//                    val curx = (startxInt + fraction * (endxInt - startxInt)).toInt()
-//                    val startyInt: Int = startValue.getY()
-//                    val endyInt: Int = endValue.getY()
-//                    val cury = (startyInt + fraction * (endyInt - startyInt)).toInt()
-//                    val point = Point()
-//                    point.setX(curx)
-//                    point.setY(cury)
-//                    return point
-//                }
-//            }
 
+            }
+
+            class MyProperty2(name: String?) : Property<TextView, Point>(Point::class.java, name) {
+                override fun get(p0: TextView): Point {
+                    val point = Point()
+                    point.x = p0.translationX.toInt()
+                    point.y = p0.translationY.toInt()
+                    return point
+                }
+
+                override fun set(`object`: TextView, value: Point) {
+                    `object`.translationX = value.x.toFloat()
+                    `object`.translationY = value.y.toFloat()
+                }
+            }
+
+            class PointEvaluator : TypeEvaluator<Point> {
+                override fun evaluate(fraction: Float, startValue: Point, endValue: Point): Point {
+                    val startxInt: Int = startValue.x
+                    val endxInt: Int = endValue.x
+                    val curx = (startxInt + fraction * (endxInt - startxInt)).toInt()
+                    val startyInt: Int = startValue.y
+                    val endyInt: Int = endValue.y
+                    val cury = (startyInt + fraction * (endyInt - startyInt)).toInt()
+                    val point = Point()
+                    point.x = curx
+                    point.y = cury
+                    return point
+                }
+            }
+
+            val property2 = MyProperty2("tran") // 参数只是为了标识无具体意义
+            val evaluator = PointEvaluator()
+            val point1 = Point()
+            point1.x = 0
+            point1.y = 100
+
+            val point2 = Point()
+            point2.x = 700
+            point2.y = 1000
+
+            val animator = ObjectAnimator.ofObject(textview, property2, evaluator, point1, point2)
+            animator.duration = 3000
+            animator.interpolator = LinearInterpolator()
+            animator.repeatCount = -1
+            animator.start()
+        }
+
+        findViewById<Button>(R.id.btn_ofPropertyValuesHolder).setOnClickListener {
+            val k0 = Keyframe.ofFloat(.0f, .0f)
+            val k1 = Keyframe.ofFloat(.5f, 360f)
+            val k2 = Keyframe.ofFloat(1f, .0f)
+            val pvhRotation = PropertyValuesHolder.ofKeyframe(View.ROTATION, k0, k1, k2)
+            val animator = ObjectAnimator.ofPropertyValuesHolder(textview, pvhRotation)
+            animator.duration = 3000
+            animator.start()
         }
     }
 }
