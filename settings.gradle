@@ -1,3 +1,4 @@
+include ':skinsupport'
 include ':dokit'
 include ':animation'
 include ':motionlayout'
