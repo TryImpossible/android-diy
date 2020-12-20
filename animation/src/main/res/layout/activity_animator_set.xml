@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".property.AnimatorSetActivity">
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="80dp"
+        android:layout_height="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="30dp"
+        android:background="@color/purple_200"
+        android:gravity="center"
+        android:text="属性动画"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/textView2"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="80dp"
+        android:layout_height="30dp"
+        android:background="@color/purple_200"
+        android:gravity="center"
+        android:text="属性动画"
+        app:layout_constraintLeft_toRightOf="@id/textView1"
+        app:layout_constraintRight_toLeftOf="@id/textView3"
+        app:layout_constraintTop_toTopOf="@id/textView1" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="80dp"
+        android:layout_height="30dp"
+        android:background="@color/purple_200"
+        android:gravity="center"
+        android:text="属性动画"
+        app:layout_constraintLeft_toRightOf="@id/textView2"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/textView2" />
+
+    <Button
+        android:id="@+id/btn_playTogether1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="PlayTogether1"
+        android:textAllCaps="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent" />
+
+    <Button
+        android:id="@+id/btn_playTogether2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="PlayTogether1"
+        android:textAllCaps="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <Button
+        android:id="@+id/btn_playSequentially1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="playSequentiall1"
+        android:textAllCaps="false"
+        app:layout_constraintBottom_toTopOf="@id/btn_playTogether1"
+        app:layout_constraintLeft_toLeftOf="parent" />
+
+    <Button
+        android:id="@+id/btn_play1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="btn_play1"
+        android:textAllCaps="false"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/btn_playSequentially1" />
+
+    <Button
+        android:id="@+id/btn_play2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="btn_play2"
+        android:textAllCaps="false"
+        app:layout_constraintBottom_toTopOf="@id/btn_playSequentially1"
+        app:layout_constraintLeft_toLeftOf="parent" />
+
+    <Button
+        android:id="@+id/btn_play3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="btn_play3"
+        android:textAllCaps="false"
+        app:layout_constraintBottom_toTopOf="@id/btn_playSequentially1"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <Button
+        android:id="@+id/btn_xml"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="xml"
+        android:textAllCaps="false"
+        app:layout_constraintBottom_toTopOf="@id/btn_play3"
+        app:layout_constraintLeft_toLeftOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
