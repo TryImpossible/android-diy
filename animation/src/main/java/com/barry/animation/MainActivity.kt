@@ -10,6 +10,7 @@ import com.barry.animation.interpolator.OfficialInterpolatorActivity
 import com.barry.animation.layouttransition.CustomLayoutTransitionActivity
 import com.barry.animation.layouttransition.DefaultLayoutTransitionActivity
 import com.barry.animation.property.*
+import com.barry.animation.sharedelement.ASharedElementTransitonActivity
 import com.barry.animation.tween.*
 
 class MainActivity : AppCompatActivity() {
@@ -61,6 +62,9 @@ class MainActivity : AppCompatActivity() {
         }
         findViewById<Button>(R.id.btn_custom_layout_transition).setOnClickListener {
             startActivity(Intent(this, CustomLayoutTransitionActivity().javaClass))
+        }
+        findViewById<Button>(R.id.btn_share_element).setOnClickListener {
+            startActivity(Intent(this, ASharedElementTransitonActivity().javaClass))
         }
     }
 }
