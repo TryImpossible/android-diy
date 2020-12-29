@@ -21,7 +21,8 @@
         android:layout_height="wrap_content"
         android:text="关闭1"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent" />
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/btn_exit2" />
 
     <Button
         android:id="@+id/btn_exit2"
@@ -29,7 +30,8 @@
         android:layout_height="wrap_content"
         android:text="关闭2"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toRightOf="@id/btn_exit1" />
+        app:layout_constraintLeft_toRightOf="@id/btn_exit1"
+        app:layout_constraintRight_toLeftOf="@id/btn_exit3" />
 
     <Button
         android:id="@+id/btn_exit3"
@@ -37,5 +39,6 @@
         android:layout_height="wrap_content"
         android:text="关闭3"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toRightOf="@id/btn_exit2" />
+        app:layout_constraintLeft_toRightOf="@id/btn_exit2"
+        app:layout_constraintRight_toRightOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

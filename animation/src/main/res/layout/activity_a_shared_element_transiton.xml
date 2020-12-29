@@ -10,9 +10,55 @@
         android:id="@+id/iv_image"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:alpha="0.3"
         android:src="@mipmap/ic_launcher_round"
         android:transitionName="shareElement"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btn_enter1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="跳转1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/btn_enter2" />
+
+    <Button
+        android:id="@+id/btn_enter2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="跳转2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/btn_enter1"
+        app:layout_constraintRight_toLeftOf="@id/btn_enter3" />
+
+    <Button
+        android:id="@+id/btn_enter3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="跳转3"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/btn_enter2"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <Button
+        android:id="@+id/btn_enter4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="跳转4"
+        app:layout_constraintBottom_toTopOf="@id/btn_enter1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/btn_enter5" />
+
+    <Button
+        android:id="@+id/btn_enter5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="跳转5"
+        app:layout_constraintBottom_toTopOf="@id/btn_enter1"
+        app:layout_constraintLeft_toRightOf="@id/btn_enter4"
+        app:layout_constraintRight_toRightOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

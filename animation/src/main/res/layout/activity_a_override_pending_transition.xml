@@ -31,7 +31,8 @@
         android:layout_height="wrap_content"
         android:text="跳转2"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toRightOf="@id/btn_enter1" />
+        app:layout_constraintLeft_toRightOf="@id/btn_enter1"
+        app:layout_constraintRight_toLeftOf="@id/btn_enter3" />
 
     <Button
         android:id="@+id/btn_enter3"
@@ -39,5 +40,6 @@
         android:layout_height="wrap_content"
         android:text="跳转3"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toRightOf="@id/btn_enter2" />
+        app:layout_constraintLeft_toRightOf="@id/btn_enter2"
+        app:layout_constraintRight_toRightOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
