@@ -101,6 +101,20 @@
             android:layout_height="wrap_content"
             android:text="AnimatorSet联合动画"
             android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/btn_default_layout_transition"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="默认的LayoutTransition动画"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/btn_custom_layout_transition"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="自定义LayoutTransition动画"
+            android:textAllCaps="false" />
     </LinearLayout>
 
 </ScrollView>

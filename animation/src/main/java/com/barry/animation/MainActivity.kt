@@ -7,6 +7,8 @@ import android.widget.Button
 import com.barry.animation.frame.FrameActivity
 import com.barry.animation.interpolator.CustomInterpolatorActivity
 import com.barry.animation.interpolator.OfficialInterpolatorActivity
+import com.barry.animation.layouttransition.CustomLayoutTransitionActivity
+import com.barry.animation.layouttransition.DefaultLayoutTransitionActivity
 import com.barry.animation.property.*
 import com.barry.animation.tween.*
 
@@ -53,6 +55,12 @@ class MainActivity : AppCompatActivity() {
         }
         findViewById<Button>(R.id.btn_animator_set).setOnClickListener {
             startActivity(Intent(this, AnimatorSetActivity().javaClass))
+        }
+        findViewById<Button>(R.id.btn_default_layout_transition).setOnClickListener {
+            startActivity(Intent(this, DefaultLayoutTransitionActivity().javaClass))
+        }
+        findViewById<Button>(R.id.btn_custom_layout_transition).setOnClickListener {
+            startActivity(Intent(this, CustomLayoutTransitionActivity().javaClass))
         }
     }
 }
