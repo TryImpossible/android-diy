@@ -12,6 +12,7 @@ import com.barry.animation.layouttransition.DefaultLayoutTransitionActivity
 import com.barry.animation.property.*
 import com.barry.animation.sharedelement.ASharedElementTransitonActivity
 import com.barry.animation.tween.*
+import com.barry.animation.viewproperty.ViewPropertyAnimatorActivity
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -65,6 +66,9 @@ class MainActivity : AppCompatActivity() {
         }
         findViewById<Button>(R.id.btn_share_element).setOnClickListener {
             startActivity(Intent(this, ASharedElementTransitonActivity().javaClass))
+        }
+        findViewById<Button>(R.id.btn_view_property_animator).setOnClickListener {
+            startActivity(Intent(this, ViewPropertyAnimatorActivity().javaClass))
         }
     }
 }

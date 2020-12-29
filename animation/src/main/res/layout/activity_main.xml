@@ -122,6 +122,13 @@
             android:layout_height="wrap_content"
             android:text="共享元素动画"
             android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/btn_view_property_animator"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="ViewPropertyAnimator动画"
+            android:textAllCaps="false" />
     </LinearLayout>
 
 </ScrollView>

@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Androiddiy">
-        <activity android:name=".sharedelement.BSharedElementTransitonActivity"></activity>
+        <activity android:name=".viewproperty.ViewPropertyAnimatorActivity"></activity>
+        <activity android:name=".sharedelement.BSharedElementTransitonActivity" />
         <activity android:name=".sharedelement.ASharedElementTransitonActivity" />
         <activity android:name=".layouttransition.CustomLayoutTransitionActivity" />
         <activity android:name=".layouttransition.DefaultLayoutTransitionActivity" />
