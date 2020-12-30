@@ -136,6 +136,41 @@
             android:layout_height="wrap_content"
             android:text="Activity转场动画"
             android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/btn_transition_animator"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Transition动画"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/btn_scene_01_animator"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Scene动画01"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/btn_scene_02_animator"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Scene动画02"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/btn_scene_03_animator"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Scene动画03"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/btn_scene_04_animator"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Scene动画04"
+            android:textAllCaps="false" />
     </LinearLayout>
 
 </ScrollView>

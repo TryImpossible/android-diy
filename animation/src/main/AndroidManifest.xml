@@ -9,7 +9,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Androiddiy">
-        <activity android:name=".override_pending_transition.BOverridePendingTransitionActivity"></activity>
+        <activity android:name=".scene_transition.SceneTransition4Activity"></activity>
+        <activity android:name=".scene_transition.SceneTransition3Activity" />
+        <activity android:name=".scene_transition.SceneTransition2Activity" />
+        <activity android:name=".scene_transition.SceneTransition1Activity" />
+        <activity android:name=".scene_transition.BSceneTransitionActivity" /> <!-- <activity android:name=".scene_transition.ASceneTransitionActivity" android:theme="@style/ASceneTransitionActivityAnimation" /> -->
+        <!-- <activity android:name=".scene_transition.ASceneTransitionActivity" android:theme="@style/ASceneTransitionActivitySharedElementAnimation" /> -->
+        <activity android:name=".scene_transition.ASceneTransitionActivity" />
+        <activity android:name=".override_pending_transition.BOverridePendingTransitionActivity" />
         <activity android:name=".override_pending_transition.AOverridePendingTransitionActivity" />
         <activity android:name=".viewproperty.ViewPropertyAnimatorActivity" />
         <activity android:name=".sharedelement.BSharedElementTransitonActivity" />

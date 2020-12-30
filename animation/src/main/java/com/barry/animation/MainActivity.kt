@@ -11,6 +11,7 @@ import com.barry.animation.layouttransition.CustomLayoutTransitionActivity
 import com.barry.animation.layouttransition.DefaultLayoutTransitionActivity
 import com.barry.animation.override_pending_transition.AOverridePendingTransitionActivity
 import com.barry.animation.property.*
+import com.barry.animation.scene_transition.*
 import com.barry.animation.sharedelement.ASharedElementTransitonActivity
 import com.barry.animation.tween.*
 import com.barry.animation.viewproperty.ViewPropertyAnimatorActivity
@@ -73,6 +74,21 @@ class MainActivity : AppCompatActivity() {
         }
         findViewById<Button>(R.id.btn_activity_enter_animator).setOnClickListener {
             startActivity(Intent(this, AOverridePendingTransitionActivity().javaClass))
+        }
+        findViewById<Button>(R.id.btn_transition_animator).setOnClickListener {
+            startActivity(Intent(this, ASceneTransitionActivity().javaClass))
+        }
+        findViewById<Button>(R.id.btn_scene_01_animator).setOnClickListener {
+            startActivity(Intent(this, SceneTransition1Activity().javaClass))
+        }
+        findViewById<Button>(R.id.btn_scene_02_animator).setOnClickListener {
+            startActivity(Intent(this, SceneTransition2Activity().javaClass))
+        }
+        findViewById<Button>(R.id.btn_scene_03_animator).setOnClickListener {
+            startActivity(Intent(this, SceneTransition3Activity().javaClass))
+        }
+        findViewById<Button>(R.id.btn_scene_04_animator).setOnClickListener {
+            startActivity(Intent(this, SceneTransition4Activity().javaClass))
         }
     }
 }
