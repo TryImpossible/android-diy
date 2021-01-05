@@ -1,4 +1,4 @@
-package com.barry.animation.sharedelement
+package com.barry.animation.shared_element
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

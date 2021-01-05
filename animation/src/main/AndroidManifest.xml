@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Androiddiy">
-        <activity android:name=".circular_reveal.CircularReveal3Activity"></activity>
+        <activity android:name=".layout_animation.LayoutAnimationActivity"></activity>
+        <activity android:name=".circular_reveal.CircularReveal3Activity" />
         <activity android:name=".circular_reveal.CircularReveal2Activity" />
         <activity android:name=".circular_reveal.CircularReveal1Activity" />
         <activity android:name=".scene_transition.SceneTransition4Activity" />
@@ -21,11 +22,11 @@
         <activity android:name=".scene_transition.ASceneTransitionActivity" />
         <activity android:name=".override_pending_transition.BOverridePendingTransitionActivity" />
         <activity android:name=".override_pending_transition.AOverridePendingTransitionActivity" />
-        <activity android:name=".viewproperty.ViewPropertyAnimatorActivity" />
-        <activity android:name=".sharedelement.BSharedElementTransitonActivity" />
-        <activity android:name=".sharedelement.ASharedElementTransitonActivity" />
-        <activity android:name=".layouttransition.CustomLayoutTransitionActivity" />
-        <activity android:name=".layouttransition.DefaultLayoutTransitionActivity" />
+        <activity android:name=".view_property.ViewPropertyAnimatorActivity" />
+        <activity android:name=".shared_element.BSharedElementTransitonActivity" />
+        <activity android:name=".shared_element.ASharedElementTransitonActivity" />
+        <activity android:name=".layout_transition.CustomLayoutTransitionActivity" />
+        <activity android:name=".layout_transition.DefaultLayoutTransitionActivity" />
         <activity android:name=".property.AnimatorSetActivity" />
         <activity android:name=".property.FullObjectAnimatorActivity" />
         <activity android:name=".property.CustomAnimatorPropertyActivity" />

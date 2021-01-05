@@ -185,6 +185,13 @@
             android:layout_height="wrap_content"
             android:text="CircularReveal动画02"
             android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/btn_layout_animation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Layout Animation"
+            android:textAllCaps="false" />
     </LinearLayout>
 
 </ScrollView>

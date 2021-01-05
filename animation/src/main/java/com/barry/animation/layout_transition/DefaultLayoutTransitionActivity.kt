@@ -1,4 +1,4 @@
-package com.barry.animation.layouttransition
+package com.barry.animation.layout_transition
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

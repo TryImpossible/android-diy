@@ -9,14 +9,15 @@ import com.barry.animation.circular_reveal.CircularReveal2Activity
 import com.barry.animation.frame.FrameActivity
 import com.barry.animation.interpolator.CustomInterpolatorActivity
 import com.barry.animation.interpolator.OfficialInterpolatorActivity
-import com.barry.animation.layouttransition.CustomLayoutTransitionActivity
-import com.barry.animation.layouttransition.DefaultLayoutTransitionActivity
+import com.barry.animation.layout_animation.LayoutAnimationActivity
+import com.barry.animation.layout_transition.CustomLayoutTransitionActivity
+import com.barry.animation.layout_transition.DefaultLayoutTransitionActivity
 import com.barry.animation.override_pending_transition.AOverridePendingTransitionActivity
 import com.barry.animation.property.*
 import com.barry.animation.scene_transition.*
-import com.barry.animation.sharedelement.ASharedElementTransitonActivity
+import com.barry.animation.shared_element.ASharedElementTransitonActivity
 import com.barry.animation.tween.*
-import com.barry.animation.viewproperty.ViewPropertyAnimatorActivity
+import com.barry.animation.view_property.ViewPropertyAnimatorActivity
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -97,6 +98,9 @@ class MainActivity : AppCompatActivity() {
         }
         findViewById<Button>(R.id.btn_circular_reveal_02_animator).setOnClickListener {
             startActivity(Intent(this, CircularReveal2Activity().javaClass))
+        }
+        findViewById<Button>(R.id.btn_layout_animation).setOnClickListener {
+            startActivity(Intent(this, LayoutAnimationActivity().javaClass))
         }
     }
 }

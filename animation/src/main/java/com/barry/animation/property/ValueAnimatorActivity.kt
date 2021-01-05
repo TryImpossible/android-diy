@@ -163,7 +163,7 @@ class ValueAnimatorActivity : AppCompatActivity(), View.OnClickListener {
             var b = startB + fraction * (endB - startB)
 
             // convert back to sRGB in the [0..255] range
-            a = a * 255.0f
+            a *= 255.0f
             r = Math.pow(r.toDouble(), 1.0 / 2.2).toFloat() * 255.0f
             g = Math.pow(g.toDouble(), 1.0 / 2.2).toFloat() * 255.0f
             b = Math.pow(b.toDouble(), 1.0 / 2.2).toFloat() * 255.0f

@@ -1,7 +1,6 @@
-package com.barry.animation.viewproperty
+package com.barry.animation.view_property
 
 import android.animation.Animator
-import android.animation.AnimatorListenerAdapter
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
