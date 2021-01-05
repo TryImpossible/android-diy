@@ -9,7 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Androiddiy">
-        <activity android:name=".scene_transition.SceneTransition4Activity"></activity>
+        <activity android:name=".circular_reveal.CircularReveal3Activity"></activity>
+        <activity android:name=".circular_reveal.CircularReveal2Activity" />
+        <activity android:name=".circular_reveal.CircularReveal1Activity" />
+        <activity android:name=".scene_transition.SceneTransition4Activity" />
         <activity android:name=".scene_transition.SceneTransition3Activity" />
         <activity android:name=".scene_transition.SceneTransition2Activity" />
         <activity android:name=".scene_transition.SceneTransition1Activity" />

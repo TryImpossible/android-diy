@@ -4,6 +4,8 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import com.barry.animation.circular_reveal.CircularReveal1Activity
+import com.barry.animation.circular_reveal.CircularReveal2Activity
 import com.barry.animation.frame.FrameActivity
 import com.barry.animation.interpolator.CustomInterpolatorActivity
 import com.barry.animation.interpolator.OfficialInterpolatorActivity
@@ -89,6 +91,12 @@ class MainActivity : AppCompatActivity() {
         }
         findViewById<Button>(R.id.btn_scene_04_animator).setOnClickListener {
             startActivity(Intent(this, SceneTransition4Activity().javaClass))
+        }
+        findViewById<Button>(R.id.btn_circular_reveal_01_animator).setOnClickListener {
+            startActivity(Intent(this, CircularReveal1Activity().javaClass))
+        }
+        findViewById<Button>(R.id.btn_circular_reveal_02_animator).setOnClickListener {
+            startActivity(Intent(this, CircularReveal2Activity().javaClass))
         }
     }
 }

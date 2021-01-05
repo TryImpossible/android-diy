@@ -171,6 +171,20 @@
             android:layout_height="wrap_content"
             android:text="Scene动画04"
             android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/btn_circular_reveal_01_animator"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="CircularReveal动画01"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/btn_circular_reveal_02_animator"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="CircularReveal动画02"
+            android:textAllCaps="false" />
     </LinearLayout>
 
 </ScrollView>
