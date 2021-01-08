@@ -16,6 +16,7 @@ public class WidgetShowActivity extends AppCompatActivity implements View.OnClic
         setContentView(R.layout.activity_widget_show);
 
         findViewById(R.id.btn_random_num).setOnClickListener(this);
+        findViewById(R.id.btn_four_corner).setOnClickListener(this);
     }
 
 
@@ -24,6 +25,9 @@ public class WidgetShowActivity extends AppCompatActivity implements View.OnClic
         switch (v.getId()) {
             case R.id.btn_random_num:
                 startActivity(new Intent(WidgetShowActivity.this, RandomNumViewActivity.class));
+                break;
+            case R.id.btn_four_corner:
+                startActivity(new Intent(WidgetShowActivity.this, FourCornerViewActivity.class));
                 break;
             default:
                 break;
