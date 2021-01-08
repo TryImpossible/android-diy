@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--但是在布局中使用自定义属性时发现并不会自动提示声明好的属性，一直困惑了很久才发现自定义属性的名称必须和自定义view的类名一样才会有提示-->
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!--  RandomNumView  -->
+    <declare-styleable name="RandomNumView">
+        <attr name="text" format="string|reference" />
+        <attr name="textColor" format="color|reference" />
+        <attr name="textSize" format="dimension|reference" />
+    </declare-styleable>
+</resources>

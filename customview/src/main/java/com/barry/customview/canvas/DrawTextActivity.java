@@ -17,14 +17,14 @@ public class DrawTextActivity extends CanvasActivity {
         int halfW = w / 2;
 
         Rect rect = new Rect();
-        paint.getTextBounds("正常绘制文本", 0, "正常绘制文本".length(), rect);
+        paint.getTextBounds("正常绘制文本abc", 0, "正常绘制文本abc".length(), rect);
         float textHeight = rect.height();
         float translateY = textHeight;
 
         // 绘制正常文本
         canvas.save();
         canvas.translate(0, translateY);
-        canvas.drawText("正常绘制文本", 0, 0, paint);
+        canvas.drawText("正常绘制文本abc", 0, 0, paint);
         canvas.restore();
         translateY += textHeight * 2;
 

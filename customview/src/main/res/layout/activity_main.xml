@@ -7,14 +7,25 @@
     tools:context=".MainActivity">
 
     <Button
-        android:id="@+id/canvas"
+        android:id="@+id/btn_canvas"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Canvas的使用"
         android:textAllCaps="false"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/btn_widget"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btn_widget"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="自定义Widget"
+        android:textAllCaps="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_canvas" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
