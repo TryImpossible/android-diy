@@ -7,22 +7,22 @@ import android.util.AttributeSet;
 import android.view.View;
 import android.view.ViewGroup;
 
-public class FourCornerView extends ViewGroup {
-    public FourCornerView(Context context) {
+public class FourCornerLayout extends ViewGroup {
+    public FourCornerLayout(Context context) {
         this(context, null);
     }
 
-    public FourCornerView(Context context, AttributeSet attrs) {
+    public FourCornerLayout(Context context, AttributeSet attrs) {
         this(context, attrs, 0);
     }
 
-    public FourCornerView(Context context, AttributeSet attrs, int defStyleAttr) {
+    public FourCornerLayout(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
         init(context, attrs, defStyleAttr);
     }
 
     @TargetApi(Build.VERSION_CODES.LOLLIPOP)
-    public FourCornerView(Context context, AttributeSet attrs, int defStyleAttr, int defStyleRes) {
+    public FourCornerLayout(Context context, AttributeSet attrs, int defStyleAttr, int defStyleRes) {
         super(context, attrs, defStyleAttr, defStyleRes);
     }
 

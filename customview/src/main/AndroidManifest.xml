@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".widget.FourCornerViewActivity"></activity>
+        <activity android:name=".widget.FlowLayoutActivity"></activity>
+        <activity android:name=".widget.FourCornerLayoutActivity" />
         <activity android:name=".widget.RandomNumViewActivity" />
         <activity android:name=".widget.WidgetShowActivity" />
         <activity android:name=".canvas.DrawRulerActivity" />

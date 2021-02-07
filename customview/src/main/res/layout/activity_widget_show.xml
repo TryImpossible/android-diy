@@ -12,17 +12,24 @@
         android:orientation="vertical">
 
         <Button
-            android:id="@+id/btn_random_num"
+            android:id="@+id/btn_random_num_view"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="随机数控件"
+            android:text="RandomNumView"
             android:textAllCaps="false" />
 
         <Button
-            android:id="@+id/btn_four_corner"
+            android:id="@+id/btn_four_corner_layout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="边角控件"
+            android:text="FourCornerLayout"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/btn_flow_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="FlowLayout"
             android:textAllCaps="false" />
 
     </LinearLayout>
