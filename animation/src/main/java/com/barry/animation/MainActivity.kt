@@ -16,6 +16,7 @@ import com.barry.animation.override_pending_transition.AOverridePendingTransitio
 import com.barry.animation.property.*
 import com.barry.animation.scene_transition.*
 import com.barry.animation.shared_element.ASharedElementTransitonActivity
+import com.barry.animation.shimmer.ShimmerActivity
 import com.barry.animation.tween.*
 import com.barry.animation.view_property.ViewPropertyAnimatorActivity
 
@@ -101,6 +102,9 @@ class MainActivity : AppCompatActivity() {
         }
         findViewById<Button>(R.id.btn_layout_animation).setOnClickListener {
             startActivity(Intent(this, LayoutAnimationActivity().javaClass))
+        }
+        findViewById<Button>(R.id.btn_shimmer).setOnClickListener {
+            startActivity(Intent(this, ShimmerActivity().javaClass))
         }
     }
 }

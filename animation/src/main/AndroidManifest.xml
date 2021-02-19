@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Androiddiy">
-        <activity android:name=".layout_animation.LayoutAnimationActivity"></activity>
+        <activity android:name=".shimmer.ShimmerActivity"></activity>
+        <activity android:name=".layout_animation.LayoutAnimationActivity" />
         <activity android:name=".circular_reveal.CircularReveal3Activity" />
         <activity android:name=".circular_reveal.CircularReveal2Activity" />
         <activity android:name=".circular_reveal.CircularReveal1Activity" />
