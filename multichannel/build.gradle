@@ -1,0 +1,150 @@
+plugins {
+    id 'com.android.application'
+    id 'kotlin-android'
+}
+
+android {
+    compileSdkVersion 30
+    buildToolsVersion "30.0.2"
+
+    defaultConfig {
+        applicationId "com.barry.multichannel"
+        minSdkVersion 16
+        targetSdkVersion 30
+        versionCode 1
+        versionName project.hasProperty('VERSION') ? VERSION : "1.0" // 编译传参: gradlew assembleRelease -PVERSION=x.x.x
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    signingConfigs {
+        release {
+            storeFile file("${STORE_FILE}")
+            storePassword "${STORE_PWD}"
+            keyAlias "${KEY_ALIAS}"
+            keyPassword "${KEY_PWD}"
+        }
+    }
+
+    buildTypes {
+        debug {
+            minifyEnabled false
+            signingConfig signingConfigs.release
+            buildConfigField("String", "ENV", '"development"')
+        }
+        release {
+            //是否混淆
+            minifyEnabled true
+            //是否设置zip对齐优化
+            zipAlignEnabled true
+            // 移除无用的resource文件
+            shrinkResources true
+            // 签名
+            signingConfig signingConfigs.release
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            buildConfigField("String", "ENV", '"producation"')
+        }
+        dev {
+            initWith(buildTypes.debug)
+            buildConfigField("String", "ENV", '"development"')
+        }
+        stag {
+            initWith(buildTypes.release)
+            buildConfigField("String", "ENV", '"staging"')
+        }
+        prod {
+            initWith(buildTypes.release)
+            buildConfigField("String", "ENV", '"producation"')
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+
+    flavorDimensions 'default'
+    productFlavors {
+        channel1 {
+            dimension "default"
+            applicationId 'com.barry.multichannel1'
+            buildConfigField("String", "SERVER_URL", '"https://channel1.com/"')
+            manifestPlaceholders = [
+                    app_name: "channel1",
+                    app_icon: "@mipmap/ic_launcher"
+            ]
+        }
+        channel2 {
+            dimension "default"
+            applicationId 'com.barry.multichannel2'
+            buildConfigField("String", "SERVER_URL", '"https://channel2.com/"')
+            manifestPlaceholders = [
+                    app_name: "channel2",
+                    app_icon: "@mipmap/ic_launcher"
+            ]
+        }
+    }
+}
+
+dependencies {
+
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+    implementation 'androidx.core:core-ktx:1.3.2'
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'com.google.android.material:material:1.2.1'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+    testImplementation 'junit:junit:4.+'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+}
+
+
+//自定义copyApk task
+task copyTask {
+    doLast {
+        //遍历
+        android.productFlavors.all { flavor ->
+            def fileName = "app_${name}_v${android.defaultConfig.versionName}.apk"
+
+//        拷贝文件的始发地
+            def sourceFile = "./build/outputs/apk/${name}/release/" + fileName
+
+//        指定文件拷贝的目的地
+            def destationFile = new File(project.getProjectDir().path + "/build/outputs/apks/")
+            try {
+//            判断文件夹是否存在
+                if (!destationFile.exists()) {
+                    destationFile.mkdir()
+                }
+                //拷贝
+                copy {
+                    from sourceFile
+                    into destationFile
+
+                    rename {
+                        fileName
+                    }
+                }
+
+            } catch (Exception e) {
+                e.printStackTrace()
+            }
+        }
+    }
+}
+
+project.afterEvaluate { project ->
+
+//    获得build task
+    def buildTask = project.tasks.getByName('build')
+    if (buildTask == null) {
+        throw GradleException('the build task is not found')
+    }
+    buildTask.doLast {
+        copyTask.execute()
+    }
+}
