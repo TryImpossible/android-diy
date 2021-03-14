@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">multichannel</string>
+    <string name="env_name">环境切换</string>
 </resources>

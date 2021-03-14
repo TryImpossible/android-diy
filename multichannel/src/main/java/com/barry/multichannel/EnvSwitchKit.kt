@@ -1,4 +1,4 @@
-package com.barry.dokit
+package com.barry.multichannel
 
 import android.content.Context
 import android.content.Intent

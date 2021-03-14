@@ -1,6 +1,5 @@
 include ':multichannel'
 include ':skinsupport'
-include ':dokit'
 include ':animation'
 include ':motionlayout'
 include ':customview'
