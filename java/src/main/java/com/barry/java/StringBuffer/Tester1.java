@@ -1,5 +1,7 @@
 package com.barry.java.StringBuffer;
 
+import java.util.regex.Pattern;
+
 /**
  * 它和 StringBuffer 之间的最大不同在于 StringBuilder 的方法不是线程安全的（不能同步访问）。
  * <p>
@@ -18,8 +20,6 @@ public class Tester1 {
         /// append() 追加字符
         /// reverse() 反转字符
         /// insert() 插入
-        /// replace()替换字符串
-
-
+        /// replace()
     }
 }
