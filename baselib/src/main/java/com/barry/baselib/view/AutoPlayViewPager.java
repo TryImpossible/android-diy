@@ -11,19 +11,19 @@
  *
  */
 
-package io.bhex.baselib.view;
+package com.barry.baselib.view;
 
 import android.content.Context;
 import android.os.Bundle;
 import android.os.Parcelable;
-import android.support.v4.view.PagerAdapter;
-import android.support.v4.view.ViewPager;
 import android.util.AttributeSet;
 import android.view.MotionEvent;
 import android.view.View;
 
-import io.bhex.baselib.utils.Assert;
-import io.bhex.baselib.utils.DebugLog;
+import androidx.viewpager.widget.PagerAdapter;
+import androidx.viewpager.widget.ViewPager;
+
+import com.barry.baselib.utils.LogUtils;
 
 /**
  * 自动进行循环播放的ViewPager
@@ -89,7 +89,7 @@ public class AutoPlayViewPager extends ViewPager {
                 if (child.getLayoutParams() != null && child.getLayoutParams().height > 0) {
                     childHeight = child.getLayoutParams().height;
                 } else {
-                    child.measure(widthMeasureSpec, MeasureSpec.makeMeasureSpec(child.getLayoutParams().height, MeasureSpec.AT_MOST));
+                    child.measure(widthMeasureSpec, View.MeasureSpec.makeMeasureSpec(child.getLayoutParams().height, View.MeasureSpec.AT_MOST));
                     childHeight = child.getMeasuredHeight();
                 }
 
@@ -100,7 +100,7 @@ public class AutoPlayViewPager extends ViewPager {
             }
         }
 
-        heightMeasureSpec = MeasureSpec.makeMeasureSpec(height, MeasureSpec.EXACTLY);
+        heightMeasureSpec = View.MeasureSpec.makeMeasureSpec(height, View.MeasureSpec.EXACTLY);
 
         super.onMeasure(widthMeasureSpec, heightMeasureSpec);
     }
@@ -125,7 +125,6 @@ public class AutoPlayViewPager extends ViewPager {
     @Override
     @Deprecated
     public void setAdapter(PagerAdapter adapter) {
-        Assert.judge(adapter instanceof AutoPlayPagerAdapter, "Adapter类型错误");
         super.setAdapter(adapter);
 
         setCurrentItem(((AutoPlayPagerAdapter) adapter).getDefaultPos());
@@ -187,7 +186,7 @@ public class AutoPlayViewPager extends ViewPager {
                     break;
             }
         } catch (Exception e) {
-            DebugLog.e(e.getMessage());
+            LogUtils.e(e.getMessage());
         }
 
         return super.dispatchTouchEvent(ev);

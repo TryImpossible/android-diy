@@ -1,4 +1,4 @@
-package com.cloudchat.lib_common.net.cookies;
+package com.barry.baselib.network.cookies;
 
 import java.io.IOException;
 import java.io.ObjectInputStream;
@@ -8,7 +8,11 @@ import java.io.Serializable;
 import okhttp3.Cookie;
 
 /**
- * Cookies对象
+ * ================================================
+ * @description Cookies对象
+ * @author barry
+ * create at 3/20/21 11:14 AM
+ * ================================================
  */
 class OkHttpCookies implements Serializable {
 

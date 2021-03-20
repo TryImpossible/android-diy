@@ -11,18 +11,19 @@
  *
  */
 
-package io.bhex.baselib.utils;
+package com.barry.baselib.utils;
 
 import android.util.Log;
 
-import io.bhex.baselib.BuildConfig;
-
 
 /**
- * 封装一个Log的类，简化log的处理
+ * ================================================
+ * @description 封装一个Log的类，简化log的处理
+ * @author barry
+ * create at 2021/3/15 12:37
  * ================================================
  */
-public class DebugLog {
+public class LogUtils {
 
     /**
      * 类名
@@ -39,9 +40,9 @@ public class DebugLog {
      */
     private static int lineNumber;
 
-    private static boolean isDebuggable = BuildConfig.DEBUG;
+    private static boolean isDebuggable = false;
 
-    private DebugLog() {
+    private LogUtils() {
     }
 
     /**

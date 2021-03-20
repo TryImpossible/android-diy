@@ -11,9 +11,9 @@ import okhttp3.Interceptor;
 import okhttp3.Request;
 import okhttp3.Response;
 
-public class HttpCacheInterceptor implements Interceptor {
+public class CacheInterceptor implements Interceptor {
 
-    private static final String TAG = HttpCacheInterceptor.class.getSimpleName();
+    private static final String TAG = CacheInterceptor.class.getSimpleName();
 
     // 接口缓存天数，14天
     private static final int CACHE_TIME = 14 * 24 * 60 * 60;
@@ -38,6 +38,9 @@ public class HttpCacheInterceptor implements Interceptor {
         if (!NetworkUtils.isConnected(BaseApplication.getContext())) {
             //有网的时候读接口上的@Headers里的配置，你可以在这里进行统一的设置
             String cacheControl = request.cacheControl().toString();
+            if (cacheControl != null) {
+                cacheControl = "public, max-age=0";
+            }
             return originalResponse.newBuilder()
                     .header("Cache-Control", cacheControl)
                     .removeHeader("Pragma")

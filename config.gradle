@@ -1,0 +1,124 @@
+ext {
+    android = [
+            versionName      : System.getenv("APP_VERSION_NUMBER") ?: "1.0.0",
+            versionCode      : System.getenv("APP_BUILD_NUMBER") ?: 1,
+
+            compileSdkVersion: 30,
+            buildToolsVersion: "30.0.2",
+            minSdkVersion    : 19,
+            targetSdkVersion : 30,
+    ]
+
+    versions = [
+            "kotlin-stdlib"              : "1.3.50",
+            "core-ktx"                   : "1.3.2",
+            appcompat                    : "1.2.0",
+            material                     : "1.2.1",
+            constraintlayout             : "2.0.4",
+            junit                        : "4.+",
+            "ext:junit"                  : "1.1.2",
+            "espresso-core"              : "3.3.0",
+            multidex                     : "2.0.1",
+
+            rxandroid                    : "2.0.1",
+            rxjava                       : "2.0.5",
+            dagger                       : "2.16",
+            retrofit                     : "2.6.2",
+            okhttp                       : "3.14.0",
+            rxbus                        : "2.0.1",
+            rxpermissions                : "0.10.2",
+
+            SmartRefreshLayout           : "1.1.0",
+            BaseRecyclerViewAdapterHelper: "2.9.47",
+
+            glide                        : "4.9.0",
+            "glide-transformations"      : "4.0.0",
+            fresco                       : "1.10.0",
+
+            "arouter-api"                : "1.5.0",
+            "arouter-compiler"           : "1.2.2",
+            "arouter-register"           : "1.0.2",
+
+            "zing"                       : "3.3.0",
+            "picture_library"            : "v2.4.2",
+    ]
+
+    plugins = [
+            "arouter-register": "ccom.alibaba.arouter",
+    ]
+
+    dependencies = [
+            "kotlin-stdlib"                 : "org.jetbrains.kotlin:kotlin-stdlib:${versions.kotlin_version}",
+            "core-ktx"                      : "androidx.core:core-ktx:${versions["core-ktx"]}",
+            appcompat                       : "androidx.appcompat:appcompat:${versions.appcompat}",
+            material                        : "com.google.android.material:material:${versions.material}",
+            constraintlayout                : "androidx.constraintlayout:constraintlayout:${versions.constraintlayout}",
+            "junit"                         : "junit:junit:${versions.junit}",
+            "ext:junit"                     : "androidx.test.ext:junit:${versions["ext:junit"]}",
+            "espresso-core"                 : "androidx.test.espresso:espresso-core:${versions["espresso-core"]}",
+            "multidex"                      : "com.android.support:multidex:${versions.multidex}",
+
+            // retrofit+rxjava+okhttp+dagger
+            rxandroid                       : "io.reactivex.rxjava2:rxandroid:${versions.rxandroid}",
+            rxjava                          : "io.reactivex.rxjava2:rxjava:${versions.rxjava}",
+            rxbus                           : "com.hwangjr.rxbus:rxbus:${versions.rxbus}",
+            rxpermissions                   : "com.github.tbruyelle:rxpermissions:${versions.rxpermissions}",
+            dagger                          : "com.google.dagger:dagger:${versions.dagger}",
+            "dagger-compiler"               : "com.google.dagger:dagger-compiler:${versions.dagger}",
+            retrofit                        : "com.squareup.retrofit2:retrofit:${versions.retrofit}",
+            "adapter-rxjava2"               : "com.squareup.retrofit2:adapter-rxjava2:${versions.retrofit}",
+            "converter-scalars"             : "com.squareup.retrofit2:converter-scalars:${versions.retrofit}",
+            "converter-gson"                : "com.squareup.retrofit2:converter-gson:${versions.retrofit}",
+            "logging-interceptor"           : "com.squareup.okhttp3:logging-interceptor:${versions.okhttp}",
+            okhttp                          : "com.squareup.okhttp3:okhttp:${versions.okhttp}",
+
+            SmartRefreshLayout              : "com.scwang.smartrefresh:SmartRefreshLayout:${versions.SmartRefreshLayout}",
+            SmartRefreshHeader              : "com.scwang.smartrefresh:SmartRefreshHeader:${versions.SmartRefreshLayout}",  //没有使用特殊Header，可以不加这行
+            BaseRecyclerViewAdapterHelper   : "com.github.CymChad:BaseRecyclerViewAdapterHelper:${versions.BaseRecyclerViewAdapterHelper}",
+
+            fresco                          : "com.facebook.fresco:fresco:${versions.fresco}",
+            glide                           : "com.github.bumptech.glide:glide:${versions.glide}",
+            "glide-compiler"                : "com.github.bumptech.glide:compiler:${versions.glide}",
+            "glide-transformations"         : "jp.wasabeef:glide-transformations:${versions["glide-transformations"]}",
+
+            "arouter-api"                   : "com.alibaba:arouter-api:${versions["arouter-api"]}",
+            "arouter-compiler"              : "com.alibaba:arouter-compiler:${versions["arouter-compiler"]}",
+
+            "zxing:core"                    : "com.google.zxing:core:${versions.zing}",
+            "zxing:android-core"            : "com.google.zxing:android-core:${versions.zing}",
+            "picture_library"               : "com.github.LuckSiege.PictureSelector:picture_library:${versions["picture_library"]}",
+
+            agentweb                        : "com.just.agentweb:agentweb:4.1.3",
+            agentwebfilechooser             : "com.just.agentweb:filechooser:4.1.3",
+
+
+            //facebook android调试
+            stetho                          : "com.facebook.stetho:stetho:1.5.0",
+            "stetho-okhttp3"                : "com.facebook.stetho:stetho-okhttp3:1.5.0",
+            "leakcanary-android"            : "com.squareup.leakcanary:leakcanary-android:1.5",
+            "leakcanary-android-no-op"      : "com.squareup.leakcanary:leakcanary-android-no-op:1.5",
+            "blockcanary-android"           : "com.github.markzhai:blockcanary-android:1.5.0",
+            walle                           : "com.meituan.android.walle:library:1.1.6",
+
+            lottie                          : 'com.airbnb.android:lottie:2.7.0',
+            FlycoTabLayout                  : "com.flyco.tablayout:FlycoTabLayout_Lib:2.1.2@aar",
+            banner                          : "com.youth.banner:banner:1.4.10",
+            textbannerview                  : "com.superluo:textbannerview:1.0.5",
+            BigImageViewPager               : "com.github.SherlockGougou:BigImageViewPager:v3_2.1.4",
+            //滚轮
+            "Android-PickerView"            : "com.contrarywind:Android-PickerView:4.1.6",
+            "mmkv-static"                   : "com.tencent:mmkv-static:1.1.0",
+            xpopup                          : "com.lxj:xpopup:2.1.4",
+
+            //换肤
+            "skin-support"                  : "skin.support:skin-support:3.1.4",
+            // skin-support 基础控件支持
+            "skin-support-design"           : "skin.support:skin-support-design:3.1.4",
+            // skin-support-design material design 控件支持[可选]
+            "skin-support-cardview"         : "skin.support:skin-support-cardview:3.1.4",
+            // skin-support-cardview CardView 控件支持[可选]
+            "skin-support-constraint-layout": "skin.support:skin-support-constraint-layout:3.1.4",
+            // skin-support-constraint-layout ConstraintLayout 控件支持[可选]
+            "skin-support-flycotablayout"   : 'skin.support:flycotablayout:2.1.2'
+    ]
+}

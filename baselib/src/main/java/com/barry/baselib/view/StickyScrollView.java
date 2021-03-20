@@ -1,25 +1,28 @@
-package io.bhex.baselib.view;
+package com.barry.baselib.view;
 
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.graphics.Canvas;
 import android.graphics.drawable.Drawable;
 import android.os.Build;
-import android.support.v4.widget.NestedScrollView;
 import android.util.AttributeSet;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.animation.AlphaAnimation;
-import android.widget.ScrollView;
+
+import androidx.core.widget.NestedScrollView;
+
+import com.barry.baselib.R;
 
 import java.util.ArrayList;
 
-import io.bhex.baselib.R;
-
 /**
- * created by gongdongyang
- * on 2020/3/1
+ * ================================================
+ * @description 可悬停的ScrollView
+ * @author barry
+ * create at 2021/3/16 19:29
+ * ================================================
  */
 public class StickyScrollView extends NestedScrollView {
     /**
@@ -188,7 +191,7 @@ public class StickyScrollView extends NestedScrollView {
     }
 
     @Override
-    public void addView(View child, int index, android.view.ViewGroup.LayoutParams params) {
+    public void addView(View child, int index, ViewGroup.LayoutParams params) {
         super.addView(child, index, params);
         findStickyViews(child);
     }
@@ -200,7 +203,7 @@ public class StickyScrollView extends NestedScrollView {
     }
 
     @Override
-    public void addView(View child, android.view.ViewGroup.LayoutParams params) {
+    public void addView(View child, ViewGroup.LayoutParams params) {
         super.addView(child, params);
         findStickyViews(child);
     }

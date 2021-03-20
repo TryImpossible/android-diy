@@ -10,7 +10,7 @@
  *  *******************************************************************
  */
 
-package io.bhex.baselib.utils;
+package com.barry.baselib.utils;
 
 import android.app.Activity;
 import android.content.Context;
@@ -19,12 +19,14 @@ import android.widget.TextView;
 
 /**
  * ================================================
- * 描   述：软键盘
+ *
+ * @author barry
+ * create at 2021/3/15 14:23
  * ================================================
+ * @description 软键盘
  */
-
-public class KeyBoardUtil {
-    private KeyBoardUtil() {
+public class KeyboardUtils {
+    private KeyboardUtils() {
         throw new UnsupportedOperationException("cannot be instantiated");
     }
 
@@ -34,7 +36,7 @@ public class KeyBoardUtil {
      * @param mEditText 输入框
      * @param mContext  上下文
      */
-    public static void openKeybord(TextView mEditText, Context mContext) {
+    public static void openKeybord(final TextView mEditText, final Context mContext) {
         InputMethodManager imm = (InputMethodManager) mContext.getSystemService(Context.INPUT_METHOD_SERVICE);
         imm.showSoftInput(mEditText, InputMethodManager.RESULT_SHOWN);
         imm.toggleSoftInput(InputMethodManager.SHOW_FORCED, InputMethodManager.HIDE_IMPLICIT_ONLY);
@@ -46,7 +48,7 @@ public class KeyBoardUtil {
      * @param mEditText 输入框
      * @param mContext  上下文
      */
-    public static void closeKeybord(TextView mEditText, Context mContext) {
+    public static void closeKeybord(final TextView mEditText, final Context mContext) {
         InputMethodManager imm = (InputMethodManager) mContext.getSystemService(Context.INPUT_METHOD_SERVICE);
         imm.hideSoftInputFromWindow(mEditText.getWindowToken(), InputMethodManager.HIDE_NOT_ALWAYS);
     }

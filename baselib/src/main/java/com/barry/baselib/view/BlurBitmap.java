@@ -11,7 +11,7 @@
  *
  */
 
-package io.bhex.baselib.view;
+package com.barry.baselib.view;
 
 import android.annotation.TargetApi;
 import android.content.Context;
@@ -23,10 +23,12 @@ import android.renderscript.RenderScript;
 import android.renderscript.ScriptIntrinsicBlur;
 
 /**
- * 描   述：高斯模糊
+ * ================================================
+ * @description 高斯模糊
+ * @author barry
+ * create at 2021/3/16 19:37
  * ================================================
  */
-
 public class BlurBitmap {
     /**
      * 图片缩放比例

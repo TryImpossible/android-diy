@@ -11,25 +11,32 @@
  *
  */
 
-package io.bhex.baselib.mvp;
+package com.barry.baselib.core;
 
 import android.content.Context;
-import android.graphics.Color;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import androidx.annotation.Nullable;
+import androidx.fragment.app.Fragment;
+
+import com.barry.baselib.utils.LogUtils;
+
 import java.lang.reflect.Method;
 import java.util.List;
 
-import io.bhex.baselib.utils.DebugLog;
-
-
+/**
+ * ================================================
+ * @description 最基础的Fragment类，所有原生Fragment都应继承它
+ * @author barry
+ * create at 2021/3/16 15:22
+ * ================================================
+ */
 public abstract class BaseCoreFragment extends Fragment {
 
+    public Context mContext;
     protected View rootView;
 
     public BaseCoreFragment() {
@@ -38,8 +45,8 @@ public abstract class BaseCoreFragment extends Fragment {
     }
 
     /**
-     * 这个不会由Fragment自身的生命周期发起 而是由 {@link android.support.v4.app.FragmentPagerAdapter}
-     * 和 {@link android.support.v4.app.FragmentStatePagerAdapter} 来调用，所以一般情况下，只有在ViewPager
+     * 这个不会由Fragment自身的生命周期发起 而是由 {@link androidx.fragment.app.FragmentPagerAdapter}
+     * 和 {@link androidx.fragment.app.FragmentPagerAdapter} 来调用，所以一般情况下，只有在ViewPager
      * 中才会有
      *
      * @param isVisibleToUser
@@ -47,40 +54,32 @@ public abstract class BaseCoreFragment extends Fragment {
     @Override
     public void setUserVisibleHint(boolean isVisibleToUser) {
         super.setUserVisibleHint(isVisibleToUser);
-        DebugLog.i(getClass().getSimpleName() + "------enter------  userVisible:" + isVisibleToUser);
+        LogUtils.i(getClass().getSimpleName() + "------enter------  userVisible:" + isVisibleToUser);
     }
 
     @Override
     public void onAttach(Context context) {
         super.onAttach(context);
-        DebugLog.i(getClass().getSimpleName() + "------enter------");
+        LogUtils.i(getClass().getSimpleName() + "------enter------");
     }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        DebugLog.i(getClass().getSimpleName() + "------enter------");
+        LogUtils.i(getClass().getSimpleName() + "------enter------");
     }
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        DebugLog.i(getClass().getSimpleName() + "------enter------");
-
-        if (rootView == null) {
-            setRootView(createView(inflater, container, savedInstanceState));
-            //createView(getLayoutId(),container,false)
-            executeOnceAfterCreateView();
-        }
-
-        if (rootView.getParent() != null)
-            ((ViewGroup) rootView.getParent()).removeView(rootView);
-
+        LogUtils.i(getClass().getSimpleName() + "------enter------");
+        rootView = inflater.inflate(getLayoutId(), container, false);
+        mContext = getActivity();
         return rootView;
     }
 
     /**
-     * 在Fragment show hide 的时候被调用，但是第一次不会调用，可以查看{@link android.support.v4.app.FragmentManager}
+     * 在Fragment show hide 的时候被调用，但是第一次不会调用，可以查看{@link androidx.fragment.app.FragmentManager}
      * 源码，了解调用时机
      *
      * @param hidden
@@ -98,130 +97,57 @@ public abstract class BaseCoreFragment extends Fragment {
                 }
             }
 
-        DebugLog.i(getClass().getSimpleName() + "------enter------ hidden:" + hidden);
+        LogUtils.i(getClass().getSimpleName() + "------enter------ hidden:" + hidden);
     }
-
-    /**
-     * 只执行一次
-     *
-     * @param inflater
-     * @param container
-     * @param savedInstanceState
-     * @return
-     */
-    protected abstract View createView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState);
-
-    protected abstract void executeOnceAfterCreateView();
 
     @Override
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-        DebugLog.i(getClass().getSimpleName() + "------enter------");
+        LogUtils.i(getClass().getSimpleName() + "------enter------");
     }
 
     @Override
     public void onStart() {
         super.onStart();
-        DebugLog.i(getClass().getSimpleName() + "------enter------");
+        LogUtils.i(getClass().getSimpleName() + "------enter------");
     }
 
     @Override
     public void onResume() {
         super.onResume();
-
-//        List<Fragment> frgs = getChildFragmentManager().getFragments();
-//        if (frgs != null)
-//            for (Fragment item : frgs) {
-//                if (item != null) {
-//                    item.onResume();
-//                }
-//            }
-
-        DebugLog.i(getClass().getSimpleName() + "------enter------");
+        LogUtils.i(getClass().getSimpleName() + "------enter------");
     }
 
     @Override
     public void onPause() {
         super.onPause();
-
-//        List<Fragment> frgs = getChildFragmentManager().getFragments();
-//        if (frgs != null)
-//            for (Fragment item : frgs) {
-//                if (item != null) {
-//                    item.onPause();
-//                }
-//            }
-
-//        deliverCall2Child("onPause");
-        DebugLog.i(getClass().getSimpleName() + "------enter------");
+        LogUtils.i(getClass().getSimpleName() + "------enter------");
     }
-
-    protected void deliverCall2Child(String methodName, Object... params) {
-        List<Fragment> frgs = getChildFragmentManager().getFragments();
-        if (frgs == null)
-            return;
-
-        for (Fragment item : frgs) {
-            if (item == null)
-                return;
-
-            try {
-                Class clazz = Class.forName(item.getClass().getName());
-                Method method = clazz.getMethod(methodName);
-                method.invoke(item, params);
-            } catch (Exception e) {
-                DebugLog.e(e);
-            }
-
-            item.onPause();
-        }
-    }
-
 
     @Override
     public void onStop() {
         super.onStop();
-        DebugLog.i(getClass().getSimpleName() + "------enter------");
+        LogUtils.i(getClass().getSimpleName() + "------enter------");
     }
 
     @Override
     public void onDestroyView() {
         super.onDestroyView();
-        DebugLog.i(getClass().getSimpleName() + "------enter------");
+        LogUtils.i(getClass().getSimpleName() + "------enter------");
     }
 
     @Override
     public void onDestroy() {
         super.onDestroy();
-        DebugLog.i(getClass().getSimpleName() + "------enter------");
+        LogUtils.i(getClass().getSimpleName() + "------enter------");
     }
 
     @Override
     public void onDetach() {
         super.onDetach();
-        DebugLog.i(getClass().getSimpleName() + "------enter------");
+        LogUtils.i(getClass().getSimpleName() + "------enter------");
     }
 
-    protected void setRootView(View rootView) {
-        this.rootView = rootView;
-    }
-
-    public View getRootView() {
-        return rootView;
-    }
-
-    /**
-     * 状态栏颜色
-     */
-    protected final int setStatusBarColor() {
-        return ((BaseCoreActivity)getActivity()).setStatusBarColor();
-    }
-    /**
-     * 切换状态栏
-     *
-     * @param color
-     */
-    protected final void switchStatusBar(int color) {
-        ((BaseCoreActivity)getActivity()).switchStatusBar(color);
-    }
+    //由子类指定具体类型
+    public abstract int getLayoutId();
 }

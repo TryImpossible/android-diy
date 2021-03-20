@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <!--Appbar背景色-->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <!--状态栏颜色-->
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <!--控制各个控件被选中时的颜色-->
+        <item name="colorAccent">@color/colorAccent</item>
+        <!--页面背景-->
+        <!--        <item name="android:windowBackground">@drawable/splash_bg</item>-->
+        <!-- activity转场动画 -->
+        <item name="android:windowAnimationStyle">@style/activityAnimation</item>
+    </style>
+
+    <style name="AppTheme.Splash" parent="AppTheme">
+        <!--        <item name="android:windowBackground">@drawable/splash_bg</item>-->
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+        <item name="android:windowTranslucentStatus">true</item>
+    </style>
+
+    <!-- Activity的转场动画 -->
+    <style name="activityAnimation">
+        <!-- 从ActivityA打开ActivityB，ActivityB展示进入动画，ActivityB的进入动画 -->
+        <item name="android:activityOpenEnterAnimation">@anim/slide_right_in</item>
+        <!-- 从ActivityA打开ActivityB，ActivityA展示退出动画，ActivityA的退出动画 -->
+        <item name="android:activityOpenExitAnimation">@anim/slide_left_out</item>
+        <!-- 从ActivityB回退到ActivityA，ActivityA展示进入动画，ActivityA的进入动画 -->
+        <item name="android:activityCloseEnterAnimation">@anim/slide_left_in</item>
+        <!-- 从ActivityB回退到ActivityA，ActivityB展示退出动画，ActivityB的退出动画 -->
+        <item name="android:activityCloseExitAnimation">@anim/slide_right_out</item>
+    </style>
+
+</resources>
