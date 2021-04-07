@@ -10,6 +10,7 @@ import android.widget.EditText;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
+import com.barry.baselib.utils.DensityUtils;
 import com.barry.baselib.utils.KeyboardUtils;
 import com.barry.baselib.utils.LogUtils;
 
@@ -22,7 +23,7 @@ import java.util.List;
  * create at 2021/3/16 15:23
  * ================================================
  */
-public abstract class BaseCoreActivity extends AppCompatActivity {
+public abstract class BaseCoreActivity extends AppCompatActivity implements BaseView {
 
     protected boolean isAlive = true;
 
@@ -46,6 +47,7 @@ public abstract class BaseCoreActivity extends AppCompatActivity {
 
         this.getResources();
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+        DensityUtils.setOrientationWidth(this, false);
 
         setContentView(getLayoutId());
     }
@@ -113,14 +115,19 @@ public abstract class BaseCoreActivity extends AppCompatActivity {
         isAlive = false;
     }
 
-    /**
-     * Activity 是否还可用
-     *
-     * @return
-     */
+    @Override
     public boolean isAlive() {
         return isAlive && !isFinishing();
     }
+
+    @Override
+    public void showProgress(String title, String prompt) {}
+
+    @Override
+    public void showProgress() {}
+
+    @Override
+    public void dismissProgress() {}
 
     //由子类指定具体类型
     public abstract int getLayoutId();

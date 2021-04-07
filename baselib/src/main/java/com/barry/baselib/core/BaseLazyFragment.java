@@ -45,7 +45,7 @@ import java.util.List;
  * 我们可以更具以上生命周期来操作不同的业务逻辑，
  * 请务必运行此module demo，观看打印日志来自定义逻辑。
  */
-public abstract class BaseLazyFragment extends Fragment {
+public abstract class BaseLazyFragment extends Fragment implements BaseView {
 
     public Context mContext;
     protected View rootView;
@@ -218,6 +218,23 @@ public abstract class BaseLazyFragment extends Fragment {
         } else {//不可见
             onFragmentInVisible();
         }
+    }
+
+    @Override
+    public boolean isAlive() {
+        return this.isAdded() && ((BaseCoreActivity) getActivity()).isAlive();
+    }
+
+    @Override
+    public void showProgress(String title, String prompt) {
+    }
+
+    @Override
+    public void showProgress() {
+    }
+
+    @Override
+    public void dismissProgress() {
     }
 
     //Fragment首次可见的方法

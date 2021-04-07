@@ -34,7 +34,7 @@ import java.util.List;
  * create at 2021/3/16 15:22
  * ================================================
  */
-public abstract class BaseCoreFragment extends Fragment {
+public abstract class BaseCoreFragment extends Fragment implements BaseView {
 
     public Context mContext;
     protected View rootView;
@@ -146,6 +146,23 @@ public abstract class BaseCoreFragment extends Fragment {
     public void onDetach() {
         super.onDetach();
         LogUtils.i(getClass().getSimpleName() + "------enter------");
+    }
+
+    @Override
+    public boolean isAlive() {
+        return this.isAdded() && ((BaseCoreActivity) getActivity()).isAlive();
+    }
+
+    @Override
+    public void showProgress(String title, String prompt) {
+    }
+
+    @Override
+    public void showProgress() {
+    }
+
+    @Override
+    public void dismissProgress() {
     }
 
     //由子类指定具体类型

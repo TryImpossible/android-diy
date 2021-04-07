@@ -4,6 +4,8 @@ import android.app.Application;
 import android.content.Context;
 import android.os.Handler;
 
+import androidx.multidex.MultiDex;
+
 /**
  * ================================================
  * @description 使用BaseApplication，必须在组件中实现自己的Application，并且继承BaseApplication；
@@ -25,12 +27,14 @@ public abstract class BaseApplication extends Application {
     public void onCreate() {
         super.onCreate();
         sHandler = new Handler(getMainLooper());
+        init();
     }
 
     @Override
     protected void attachBaseContext(Context base) {
         super.attachBaseContext(base);
         sContext = base;
+        MultiDex.install(this);
     }
 
     protected void init() {

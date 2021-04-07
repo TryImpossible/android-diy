@@ -11,7 +11,7 @@
  *
  */
 
-package com.barry.baselib.view;
+package com.barry.baselib.view.divider;
 
 
 import android.content.Context;
@@ -26,8 +26,14 @@ import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-
-public class RecycleViewDivider extends RecyclerView.ItemDecoration{
+/**
+ * ================================================
+ * @description RecyclerView分隔线
+ * @author barry
+ * create at 4/6/21 11:25 AM
+ * ================================================
+ */
+public class RecyclerViewDivider extends RecyclerView.ItemDecoration{
     private int mMarginLeft,mMarginRight;
     private Paint mPaint;
     private Drawable mDivider;
@@ -41,7 +47,7 @@ public class RecycleViewDivider extends RecyclerView.ItemDecoration{
      * @param context
      * @param orientation 列表方向
      */
-    public RecycleViewDivider(Context context, int orientation) {
+    public RecyclerViewDivider(Context context, int orientation) {
         if (orientation != LinearLayoutManager.VERTICAL && orientation != LinearLayoutManager.HORIZONTAL) {
             throw new IllegalArgumentException("请输入正确的参数！");
         }
@@ -59,7 +65,7 @@ public class RecycleViewDivider extends RecyclerView.ItemDecoration{
      * @param orientation 列表方向
      * @param drawableId  分割线图片
      */
-    public RecycleViewDivider(Context context, int orientation, int drawableId) {
+    public RecyclerViewDivider(Context context, int orientation, int drawableId) {
         this(context, orientation);
         mDivider = ContextCompat.getDrawable(context, drawableId);
         mDividerHeight = mDivider.getIntrinsicHeight();
@@ -73,7 +79,7 @@ public class RecycleViewDivider extends RecyclerView.ItemDecoration{
      * @param dividerHeight 分割线高度
      * @param dividerColor  分割线颜色
      */
-    public RecycleViewDivider(Context context, int orientation, int dividerHeight, int dividerColor, int marginLeft, int marginRight) {
+    public RecyclerViewDivider(Context context, int orientation, int dividerHeight, int dividerColor, int marginLeft, int marginRight) {
         this(context, orientation);
         mDividerHeight = dividerHeight;
         mPaint = new Paint(Paint.ANTI_ALIAS_FLAG);

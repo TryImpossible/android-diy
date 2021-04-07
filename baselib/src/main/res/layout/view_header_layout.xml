@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/header_height"
+    android:gravity="center_vertical">
+
+    <LinearLayout
+        android:id="@+id/ll_back_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_toRightOf="@id/fl_title_layout"
+        android:minWidth="@dimen/header_height"
+        android:minHeight="@dimen/header_height"
+        android:orientation="horizontal"
+        android:paddingHorizontal="@dimen/dip_16">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|center_horizontal"
+            android:layout_marginRight="@dimen/dip_4"
+            android:minHeight="@dimen/header_height"
+            android:scaleType="center"
+            android:src="@drawable/btn_nav_back_selector" />
+
+        <TextView
+            android:id="@+id/tv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="4dp"
+            android:maxWidth="80dp"
+            android:singleLine="true"
+            android:textColor="@color/color_text_normal"
+            android:textSize="@dimen/text_normal_size"
+            android:visibility="gone"
+            tools:text="返回"
+            tools:visibility="visible" />
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/fl_title_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true">
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:maxWidth="180dp"
+            android:singleLine="true"
+            android:textColor="@color/color_text_dark"
+            android:textSize="@dimen/text_title_size"
+            tools:text="标题" />
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_menu_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:layout_toLeftOf="@id/fl_title_layout"
+        android:minWidth="@dimen/header_height"
+        android:minHeight="@dimen/header_height"
+        android:paddingHorizontal="@dimen/dip_16"
+        android:visibility="gone"
+        tools:visibility="visible">
+
+        <ImageView
+            android:id="@+id/iv_menu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:scaleType="center"
+            android:visibility="gone"
+            tools:src="@mipmap/ic_menu"
+            tools:visibility="visible" />
+
+        <TextView
+            android:id="@+id/tv_menu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/dip_4"
+            android:maxWidth="100dp"
+            android:singleLine="true"
+            android:textColor="@color/color_text_normal"
+            android:textSize="@dimen/text_normal_size"
+            android:visibility="gone"
+            tools:text="菜单"
+            tools:visibility="visible" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/divide_line_height"
+        android:layout_alignParentBottom="true"
+        android:background="@color/color_divide_line" />
+</RelativeLayout>

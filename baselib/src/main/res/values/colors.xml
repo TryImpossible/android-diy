@@ -3,4 +3,26 @@
     <color name="colorPrimary">#4594f7</color>
     <color name="colorPrimaryDark">#4594f7</color>
     <color name="colorAccent">#ffffff</color>
+
+    <color name="color_transparent">@android:color/transparent</color>
+    <color name="color_white">@android:color/white</color>
+    <color name="color_black">@android:color/black</color>
+
+    <!-- 灰色状态栏 -->
+    <color name="color_dark_status_bar_bg">#889B9B9B</color>
+    <color name="color_light_status_bar_bg">@android:color/white</color>
+
+    <color name="color_bg">#F7F7F7</color>
+
+    <color name="color_text_dark">#000000</color>
+    <color name="color_text_normal">#333333</color>
+    <color name="color_text_light">#6A6A6A</color>
+
+    <color name="color_divide_line">#F1F1F1</color>
+
+    <color name="color_btn_disabled_bg">#0c242B32</color>
+    <color name="color_btn_disabled_text">#33242B32</color>
+    <color name="color_btn_text">#FFFFFF</color>
+    <color name="color_btn_selected_bg">#F4F4F5</color>
+    <color name="color_input_hint_text">#80919598</color>
 </resources>

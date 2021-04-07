@@ -4,4 +4,43 @@
         <attr name="stuckShadowHeight" format="dimension" />
         <attr name="stuckShadowDrawable" format="reference" />
     </declare-styleable>
+
+    <!-- 分隔线布局 -->
+    <declare-styleable name="DividerLayout">
+        <attr name="divider_direction">
+            <flag name="left" value="1" />
+            <flag name="right" value="2" />
+            <flag name="top" value="4" />
+            <flag name="bottom" value="8" />
+        </attr>
+
+        <attr name="divider_color" format="reference" />
+        <attr name="divider_width" format="dimension" />
+        <attr name="divider_paddingTop" format="dimension" />
+        <attr name="divider_paddingBottom" format="dimension" />
+        <attr name="divider_paddingLeft" format="dimension" />
+        <attr name="divider_paddingRight" format="dimension" />
+    </declare-styleable>
+
+    <!--  HeaderView  -->
+    <declare-styleable name="HeaderView">
+        <!--是否显示返回-->
+        <attr name="back_visible" format="boolean" />
+        <!--是否显示返回图标-->
+        <attr name="back_icon_visible" format="boolean" />
+        <!--返回图标-->
+        <attr name="back_icon" format="reference" />
+        <!--返回文案-->
+        <attr name="back_text" format="string" />
+        <!--标题-->
+        <attr name="title" format="string" />
+        <!--是否显示菜单-->
+        <attr name="menu_visible" format="boolean" />
+        <!--菜单图标-->
+        <attr name="menu_icon" format="reference" />
+        <!--菜单文案-->
+        <attr name="menu_text" format="string" />
+        <!--分隔线是否可见-->
+        <attr name="divider_visible" format="boolean" />
+    </declare-styleable>
 </resources>
