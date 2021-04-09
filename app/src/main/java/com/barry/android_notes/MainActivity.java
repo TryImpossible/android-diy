@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, WebActivity.class);
                 intent.putExtra("url", "https://www.baidu.com");
-                intent.putExtra("hasNav", "1");
+                intent.putExtra("hasNav", "true");
                 startActivity(intent);
             }
         });

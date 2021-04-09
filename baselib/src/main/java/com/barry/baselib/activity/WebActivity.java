@@ -10,6 +10,11 @@ import com.barry.baselib.fragment.WebFragment;
 import com.barry.baselib.mvp.BaseMVPActivity;
 import com.barry.baselib.presenter.NullPresenter;
 import com.barry.baselib.view.HeaderView;
+import com.scwang.smartrefresh.layout.SmartRefreshLayout;
+import com.scwang.smartrefresh.layout.api.RefreshLayout;
+import com.scwang.smartrefresh.layout.impl.ScrollBoundaryDeciderAdapter;
+import com.scwang.smartrefresh.layout.listener.OnLoadMoreListener;
+import com.scwang.smartrefresh.layout.listener.OnRefreshListener;
 
 public class WebActivity extends BaseMVPActivity<NullContract.View, NullContract.Presenter> implements NullContract.View, WebFragment.WebFragmentListener {
 
@@ -18,6 +23,9 @@ public class WebActivity extends BaseMVPActivity<NullContract.View, NullContract
     private boolean mHideMore = false;//隐藏右方更多操作
     private boolean mHasNav = true; //导航栏的显示状态
     protected String mWebViewUrl;
+
+    private boolean disableRefresh = false; //禁止下拉刷新
+    private boolean disableLoadMore = false; //禁止加载更多
 
     @Override
     public NullContract.Presenter createPresenter() {
@@ -64,6 +72,35 @@ public class WebActivity extends BaseMVPActivity<NullContract.View, NullContract
         mWebFragment = new WebFragment(mWebViewUrl, false);
         mWebFragment.setListener(this);
         getSupportFragmentManager().beginTransaction().replace(R.id.container, mWebFragment).commit();
+
+        //  刷新
+        SmartRefreshLayout refreshLayout = findViewById(R.id.refreshLayout);
+        refreshLayout.setOnRefreshListener(new OnRefreshListener() {
+            @Override
+            public void onRefresh(RefreshLayout refreshlayout) {
+                mWebFragment.refresh();
+                refreshlayout.finishRefresh(200/*,false*/);//传入false表示刷新失败
+            }
+        });
+        refreshLayout.setOnLoadMoreListener(new OnLoadMoreListener() {
+            @Override
+            public void onLoadMore(RefreshLayout refreshlayout) {
+                refreshlayout.finishLoadMore(200/*,false*/);//传入false表示加载失败
+            }
+        });
+
+        refreshLayout.setScrollBoundaryDecider(new ScrollBoundaryDeciderAdapter() {
+            @Override
+            public boolean canRefresh(View content) {
+                //TODO
+                return mWebFragment.mAgentWeb.getWebCreator().getWebView().getScrollY() <= 0 && !disableRefresh;
+            }
+
+            @Override
+            public boolean canLoadMore(View content) {
+                return disableLoadMore;
+            }
+        });
     }
 
     @Override
