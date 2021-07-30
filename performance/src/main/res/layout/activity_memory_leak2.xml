@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MemoryLeakActivity2">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="利用 dumpsys 查看内存\n1.进入此 activity 之前, 执行 dumpsys meminfo com.barry.memoryleak 查看 'Object -> Views和Activitys'\n2.频繁进入、退出此 activity,  执行 dumpsys meminfo com.barry.memoryleak 再次查看 'Object -> Views和Activitys'\n3.退出此 activity, 等待20s左右，执行 dumpsys meminfo com.barry.memoryleak 再次查看 'Object -> Views和Activitys'\n结论：打开多少个 Activty 就一直保留了多少个 Activity，没有得到释放"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

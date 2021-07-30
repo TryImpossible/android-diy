@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<lint>
+    <!-- list of issues to configure -->
+    <!-- Ignore the UselessLeaf issue in the specified file -->
+    <issue id="ApplySharedPref" severity="ignore"><!--对指定文件，忽略该issue-->
+    </issue>
+    <issue id="LogUsage" severity="error" />
+</lint>
