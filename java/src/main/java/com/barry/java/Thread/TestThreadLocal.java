@@ -2,14 +2,8 @@ package com.barry.java.Thread;
 
 public class TestThreadLocal {
     public static void main(String[] args) {
-//        test1();
-//        test2();
-
-        Integer i = new Integer(100);
-        int j = 100;
-        System.out.print(i == j); //true
-
-
+        test1();
+        test2();
     }
 
     /**
