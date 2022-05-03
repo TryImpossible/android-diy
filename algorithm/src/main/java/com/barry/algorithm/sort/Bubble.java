@@ -1,5 +1,10 @@
 package com.barry.algorithm.sort;
 
+import java.util.Arrays;
+
+/**
+ * 冒泡排序
+ */
 public class Bubble {
     /**
      * 对数组a的元素进行排序
@@ -8,11 +13,14 @@ public class Bubble {
      */
     public static void sort(Comparable[] a) {
         for (int i = a.length - 1; i > 0; i--) {
+            System.out.println("第" + (a.length - i) + "次循环");
             for (int j = 0; j < i; j++) {
                 if (greater(a[j], a[j + 1])) {
                     exch(a, j, j + 1);
                 }
+                System.out.println("a is " + Arrays.toString(a));
             }
+
         }
     }
 
