@@ -14,8 +14,9 @@ public class SortComparable {
         Integer[] a = new Integer[list.size()];
         list.toArray(a);
         // 3.调用测试代码完成测试
-        testInsertion(a); // 17329毫秒
-        testShell(a); // 30毫秒
+//        testInsertion(a); // 17329毫秒
+//        testShell(a); // 30毫秒
+        testMerge(a); // 59毫秒
     }
 
     // 测试插入排序
@@ -40,5 +41,17 @@ public class SortComparable {
         long end = System.currentTimeMillis();
         // 4.算出程序执行的时间并输出
         System.out.println("希尔排序执行的时间为：" + (end - start) + "毫秒");
+    }
+
+    // 测试归并排序
+    public static void testMerge(Comparable[] a) {
+        // 1.获取执行之前的时间
+        long start = System.currentTimeMillis();
+        // 2.执行算法代码
+        Merge.sort(a);
+        // 3.获取执行之后的时间
+        long end = System.currentTimeMillis();
+        // 4.算出程序执行的时间并输出
+        System.out.println("归并排序执行的时间为：" + (end - start) + "毫秒");
     }
 }
