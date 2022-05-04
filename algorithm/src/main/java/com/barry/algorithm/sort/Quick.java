@@ -1,5 +1,8 @@
 package com.barry.algorithm.sort;
 
+/**
+ * 快速排序
+ */
 public class Quick {
     /**
      * 对数组内的元素进行排序

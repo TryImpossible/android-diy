@@ -1,9 +1,9 @@
 package com.barry.algorithm.linear;
 
-public class SequenceListTest {
+public class LinkListTest {
     public static void main(String[] args) {
-        // 创建顺序表对象
-        SequenceList<String> sl = new SequenceList<>(10);
+        // 创建单向链表对象
+        LinkList<String> sl = new LinkList<>();
         // 测试插入
         sl.insert("姚明");
         sl.insert("科比");

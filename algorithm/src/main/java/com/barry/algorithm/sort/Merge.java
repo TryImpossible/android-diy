@@ -1,5 +1,8 @@
 package com.barry.algorithm.sort;
 
+/**
+ * 归并排序
+ */
 public class Merge {
     // 完成归并操作需要的辅助数组
     private static Comparable[] assist;
