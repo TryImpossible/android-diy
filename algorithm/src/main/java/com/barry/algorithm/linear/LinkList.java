@@ -11,9 +11,9 @@ public class LinkList<T> implements Iterable<T> {
     // 结点类
     private class Node<T> {
         // 存储数据
-        T item;
+        public T item;
         // 下一个结点
-        Node next;
+        public Node<T> next;
 
         public Node(T item, Node next) {
             this.item = item;
