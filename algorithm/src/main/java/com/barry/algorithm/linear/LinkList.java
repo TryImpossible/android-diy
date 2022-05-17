@@ -117,6 +117,30 @@ public class LinkList<T> implements Iterable<T> {
         return -1;
     }
 
+    // 用来反转整个链表
+    public void reverse() {
+        // 判断当前链表是否为空链表，如果是空链表，则结束运行，如果不是，则调用重载的reverse方法完成反转
+        if (isEmpty()) {
+            return;
+        }
+        reverse(head.next);
+    }
+
+    // 反转指定的curr结点，并把反转后的结点返回
+    public Node<T> reverse(Node<T> curr) {
+        if (curr.next == null) {
+            head.next = curr;
+            return curr;
+        }
+        // 递归的反转当前结点curr的下一个结点；返回值就是链表反转后，当前结点的上一个结点
+        Node<T> pre = reverse(curr.next);
+        // 让返回的结点的下一个结点变为当前结点curr
+        pre.next = curr;
+        // 把当前结点的下一个结点变为null
+        curr.next = null;
+        return curr;
+    }
+
     @Override
     public Iterator<T> iterator() {
         return new LIterator();
