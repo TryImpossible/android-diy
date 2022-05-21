@@ -1,6 +1,6 @@
 package com.barry.algorithm.linear;
 
-public class CircleListCheckTest {
+public class CircleListInTest {
     public static void main(String[] args) {
         Node<String> first = new Node<>("aa", null);
         Node<String> second = new Node<>("bb", null);
@@ -20,32 +20,43 @@ public class CircleListCheckTest {
         // 产生环
         seven.next = third;
 
-        // 判断链表是否有环
-        boolean circle = isCircle(first);
-        System.out.println("first链表中是否有环：" + circle);
+        // 查找环的入口结点
+        Node<String> entrance = getEntrance(first);
+        System.out.println("first链表中环的入口结点元素为：" + entrance.item);
     }
 
     /**
-     * 判断链表中是否有环
+     * 查找有环链表中环的入口结点
      *
      * @param first 链表中的首结点
-     * @return true为有环，false为无环
+     * @return 环的入口结点
      */
-    public static Boolean isCircle(Node<String> first) {
+    public static Node<String> getEntrance(Node<String> first) {
         // 定义两个指针
         Node<String> fast = first;
         Node<String> slow = first;
-        // 遍历链表，如果快慢指针指向了同一个结点，那么证明有环
+        Node<String> temp = null;
+
+        // 遍历链表，先找到环(快慢指针相遇)，准备一个临时指针，继续遍历，直到慢指针和临时指针相遇，那么相遇时所指向的结点就是环的入口
         while (fast != null && fast.next != null) {
             // 变换fast的值和slow的值
             fast = fast.next.next;
             slow = slow.next;
             // 快慢指针是否相遇
             if (fast.equals(slow)) {
-                return true;
+                temp = first;
+                continue;
+            }
+            // 让临时结点变换
+            if (temp != null) {
+                temp = temp.next;
+                // 判断临时指针是否和慢指针相遇
+                if (temp.equals(slow)) {
+                    break;
+                }
             }
         }
-        return false;
+        return temp;
     }
 
     /**
