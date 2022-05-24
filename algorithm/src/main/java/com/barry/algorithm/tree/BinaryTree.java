@@ -142,4 +142,34 @@ public class BinaryTree<Key extends Comparable<Key>, Value> {
         }
         return x;
     }
+
+    // 查找整个树中最小的键
+    public Key min() {
+        return min(root).key;
+    }
+
+    // 在指定树x中找出最小键所在的结点
+    public Node<Key, Value> min(Node<Key, Value> x) {
+        // 需要判断x有没有左子结点，如果有，则继续向左找，如果没有，则x就是最小键所在的结点
+        if (x.left != null) {
+            return min(x.left);
+        } else {
+            return x;
+        }
+    }
+
+    // 查找整个树中最大的键
+    public Key max() {
+        return max(root).key;
+    }
+
+    // 在指定树x中找出最小键所在的结点
+    public Node<Key, Value> max(Node<Key, Value> x) {
+        // 需要判断x有没有右子结点，如果有，则继续向右找，如果没有，则x就是最小键所在的结点
+        if (x.right != null) {
+            return max(x.right);
+        } else {
+            return x;
+        }
+    }
 }
