@@ -175,14 +175,14 @@ public class BinaryTree<Key extends Comparable<Key>, Value> {
         }
     }
 
-    // 获取整个树中所有的键
+    // 使用前序遍历，获取整个树中所有的键
     public Queue<Key> preErgodic() {
         Queue<Key> keys = new Queue<>();
         preErgodic(root, keys);
         return keys;
     }
 
-    // 获取指定树x的所有键，并放到keys队列中
+    // 使用前序遍历获取指定树x的所有键，并放到keys队列中
     private void preErgodic(Node<Key, Value> x, Queue<Key> keys) {
         if (x == null) {
             return;
@@ -196,6 +196,30 @@ public class BinaryTree<Key extends Comparable<Key>, Value> {
         // 递归遍历x结点的右子树
         if (x.right != null) {
             preErgodic(x.right, keys);
+        }
+    }
+
+    // 使用中序遍历获取整个树中所有的键
+    public Queue<Key> midErgodic() {
+        Queue<Key> keys = new Queue<>();
+        midErgodic(root, keys);
+        return keys;
+    }
+
+    // 使用中序遍历获取指定树x的所有键，并放到keys队列中
+    private void midErgodic(Node<Key, Value> x, Queue<Key> keys) {
+        if (x == null) {
+            return;
+        }
+        // 先递归，把左子树中的键放到keys中
+        if (x.left != null) {
+            midErgodic(x.left, keys);
+        }
+        // 把当前结点x的键放到keys中
+         keys.enqueue(x.key);
+        // 再递归，把右子树中的键放到keys中
+        if (x.right != null) {
+            midErgodic(x.right, keys);
         }
     }
 }
