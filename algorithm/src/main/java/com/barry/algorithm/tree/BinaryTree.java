@@ -246,4 +246,27 @@ public class BinaryTree<Key extends Comparable<Key>, Value> {
         // 最后把当前结点x的键放到keys中
         keys.enqueue(x.key);
     }
+
+    // 使用层序遍历，获取整个树中的所有键
+    public Queue<Key> layerErgodic(){
+        // 定义两个队列，分别存储树中的键和树中的结点
+        Queue<Key> keys = new Queue<>();
+        Queue<Node<Key, Value>> nodes = new Queue<>();
+        // 默认，往队列中放入根结点
+        nodes.enqueue(root);
+        while (!nodes.isEmpty()) {
+            // 从队列中弹出一个结点，把key放入到keys中
+            Node<Key, Value> n = nodes.dequeue();
+            keys.enqueue(n.key);
+            // 判断当前结点有没有左子结点，如果有，则放入到nodes中
+            if (n.left != null) {
+                nodes.enqueue(n.left);
+            }
+            // 判断当前结点有没有右子结点，如果有，则放入到nodes中
+            if (n.right != null) {
+                nodes.enqueue(n.right);
+            }
+        }
+        return keys;
+    }
 }
