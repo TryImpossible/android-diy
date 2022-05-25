@@ -1,5 +1,7 @@
 package com.barry.algorithm.tree;
 
+import com.barry.algorithm.linear.Queue;
+
 public class BinaryTree<Key extends Comparable<Key>, Value> {
     // 记录根结点
     private Node<Key, Value> root;
@@ -170,6 +172,30 @@ public class BinaryTree<Key extends Comparable<Key>, Value> {
             return max(x.right);
         } else {
             return x;
+        }
+    }
+
+    // 获取整个树中所有的键
+    public Queue<Key> preErgodic() {
+        Queue<Key> keys = new Queue<>();
+        preErgodic(root, keys);
+        return keys;
+    }
+
+    // 获取指定树x的所有键，并放到keys队列中
+    private void preErgodic(Node<Key, Value> x, Queue<Key> keys) {
+        if (x == null) {
+            return;
+        }
+        // 把x结点的key放入到keys中
+        keys.enqueue(x.key);
+        // 递归遍历x结点的左子树
+        if (x.left != null) {
+            preErgodic(x.left, keys);
+        }
+        // 递归遍历x结点的右子树
+        if (x.right != null) {
+            preErgodic(x.right, keys);
         }
     }
 }
