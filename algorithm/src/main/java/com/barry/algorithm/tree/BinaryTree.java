@@ -216,10 +216,34 @@ public class BinaryTree<Key extends Comparable<Key>, Value> {
             midErgodic(x.left, keys);
         }
         // 把当前结点x的键放到keys中
-         keys.enqueue(x.key);
+        keys.enqueue(x.key);
         // 再递归，把右子树中的键放到keys中
         if (x.right != null) {
             midErgodic(x.right, keys);
         }
+    }
+
+    // 使用后序遍历获取整个树中所有的键
+    public Queue<Key> afterErgodic() {
+        Queue<Key> keys = new Queue<>();
+        afterErgodic(root, keys);
+        return keys;
+    }
+
+    // 使用后序遍历获取指定树x的所有键，并放到keys队列中
+    private void afterErgodic(Node<Key, Value> x, Queue<Key> keys) {
+        if (x == null) {
+            return;
+        }
+        // 先递归，把左子树中的键放到keys中
+        if (x.left != null) {
+            afterErgodic(x.left, keys);
+        }
+        // 再递归，把右子树中的键放到keys中
+        if (x.right != null) {
+            afterErgodic (x.right, keys);
+        }
+        // 最后把当前结点x的键放到keys中
+        keys.enqueue(x.key);
     }
 }
