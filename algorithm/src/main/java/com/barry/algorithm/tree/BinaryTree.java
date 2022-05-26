@@ -241,14 +241,14 @@ public class BinaryTree<Key extends Comparable<Key>, Value> {
         }
         // 再递归，把右子树中的键放到keys中
         if (x.right != null) {
-            afterErgodic (x.right, keys);
+            afterErgodic(x.right, keys);
         }
         // 最后把当前结点x的键放到keys中
         keys.enqueue(x.key);
     }
 
     // 使用层序遍历，获取整个树中的所有键
-    public Queue<Key> layerErgodic(){
+    public Queue<Key> layerErgodic() {
         // 定义两个队列，分别存储树中的键和树中的结点
         Queue<Key> keys = new Queue<>();
         Queue<Node<Key, Value>> nodes = new Queue<>();
@@ -268,5 +268,34 @@ public class BinaryTree<Key extends Comparable<Key>, Value> {
             }
         }
         return keys;
+    }
+
+    // 获取整个树的最大深度
+    public int maxDepth() {
+        return maxDepth(root);
+    }
+
+    // 获取指定树x的最大深度
+    private int maxDepth(Node<Key, Value> x) {
+        if (x == null) {
+            return 0;
+        }
+        // x的最大深度
+        int max = 0;
+        // 左子树的最大深度
+        int maxL = 0;
+        // 右子树的最大深度
+        int maxR = 0;
+        // 计算x结点左子树的最大深度
+        if (x.left != null) {
+            maxL = maxDepth(x.left);
+        }
+        // 计算x结点右子树的最大深度
+        if (x.right != null) {
+            maxR = maxDepth(x.right);
+        }
+        // 比较左子树的最大深度和右子树的最大深度和，取最大值+1即可
+        max = maxL > maxR ? maxL + 1 : maxR + 1;
+        return max;
     }
 }
