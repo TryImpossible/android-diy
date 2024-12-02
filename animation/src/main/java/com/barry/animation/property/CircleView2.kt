@@ -45,9 +45,9 @@ class CircleView2 @JvmOverloads constructor(context: Context?, @Nullable attrs: 
             invalidate()
         }
 
-        override fun onDraw(canvas: Canvas?) {
+        override fun onDraw(canvas: Canvas) {
             super.onDraw(canvas)
-            canvas?.drawCircle((measuredHeight / 2).toFloat(), (measuredHeight / 2).toFloat(), mRadius.toFloat(), mPaint!!)
+            canvas.drawCircle((measuredHeight / 2).toFloat(), (measuredHeight / 2).toFloat(), mRadius.toFloat(), mPaint!!)
         }
 
         override fun onMeasure(widthMeasureSpec: Int, heightMeasureSpec: Int) {

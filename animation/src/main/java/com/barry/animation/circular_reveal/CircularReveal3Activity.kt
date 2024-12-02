@@ -37,7 +37,7 @@ class CircularReveal3Activity : AppCompatActivity() {
                     it.interpolator = AccelerateDecelerateInterpolator()
                     it.start()
                     it.addListener(object : AnimatorListenerAdapter() {
-                        override fun onAnimationEnd(animation: Animator?) {
+                        override fun onAnimationEnd(animation: Animator) {
                             mIvTargetView!!.visibility = View.GONE
                         }
                     })
@@ -50,7 +50,7 @@ class CircularReveal3Activity : AppCompatActivity() {
                     it.interpolator = AccelerateDecelerateInterpolator()
                     it.start()
                     it.addListener(object : AnimatorListenerAdapter() {
-                        override fun onAnimationEnd(animation: Animator?) {
+                        override fun onAnimationEnd(animation: Animator) {
                             mIvTargetView!!.visibility = View.VISIBLE
                         }
                     })
@@ -71,7 +71,7 @@ class CircularReveal3Activity : AppCompatActivity() {
                 it.interpolator = AccelerateDecelerateInterpolator()
                 it.start()
                 it.addListener(object : AnimatorListenerAdapter() {
-                    override fun onAnimationEnd(animation: Animator?) {
+                    override fun onAnimationEnd(animation: Animator) {
                         super.onAnimationEnd(animation)
                         mIvTargetView!!.visibility = View.GONE
                     }

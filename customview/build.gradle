@@ -1,13 +1,12 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 30
-    buildToolsVersion "30.0.1"
+    compileSdk 34
 
     defaultConfig {
         applicationId "com.barry.customview"
-        minSdkVersion 19
-        targetSdkVersion 30
+        minSdk 19
+        targetSdk 34
         versionCode 1
         versionName "1.0"
 
@@ -24,6 +23,7 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
+    namespace 'com.barry.customview'
 }
 
 dependencies {

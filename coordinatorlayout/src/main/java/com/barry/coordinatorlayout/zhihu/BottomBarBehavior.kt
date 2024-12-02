@@ -51,19 +51,19 @@ class BottomBarBehavior(context: Context, attrs: AttributeSet) : CoordinatorLayo
                 .setInterpolator(FastOutSlowInInterpolator())
                 .setDuration(200)
                 .setListener(object : Animator.AnimatorListener {
-                    override fun onAnimationRepeat(animation: Animator?) {
+                    override fun onAnimationRepeat(animation: Animator) {
                         TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
                     }
 
-                    override fun onAnimationEnd(animation: Animator?) {
+                    override fun onAnimationEnd(animation: Animator) {
                         child.visibility = View.VISIBLE
                     }
 
-                    override fun onAnimationCancel(animation: Animator?) {
+                    override fun onAnimationCancel(animation: Animator) {
                         hide(child)
                     }
 
-                    override fun onAnimationStart(animation: Animator?) {
+                    override fun onAnimationStart(animation: Animator) {
 
                     }
                 }).start()
@@ -75,19 +75,19 @@ class BottomBarBehavior(context: Context, attrs: AttributeSet) : CoordinatorLayo
                 .setInterpolator(FastOutSlowInInterpolator())
                 .setDuration(200)
                 .setListener(object : Animator.AnimatorListener {
-                    override fun onAnimationRepeat(animation: Animator?) {
+                    override fun onAnimationRepeat(animation: Animator) {
                         TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
                     }
 
-                    override fun onAnimationEnd(animation: Animator?) {
+                    override fun onAnimationEnd(animation: Animator) {
                         child.visibility = View.INVISIBLE
                     }
 
-                    override fun onAnimationCancel(animation: Animator?) {
+                    override fun onAnimationCancel(animation: Animator) {
                         show(child)
                     }
 
-                    override fun onAnimationStart(animation: Animator?) {
+                    override fun onAnimationStart(animation: Animator) {
 
                     }
                 }).start()

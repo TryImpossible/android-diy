@@ -3,8 +3,7 @@ package com.barry.multichannel
 import android.app.Application
 import android.content.Context
 import androidx.multidex.MultiDex
-import com.didichuxing.doraemonkit.DoraemonKit
-import com.didichuxing.doraemonkit.kit.AbstractKit
+//import com.didichuxing.doraemonkit.DoKit
 
 class MainApplication: Application() {
     override fun attachBaseContext(base: Context?) {
@@ -14,8 +13,6 @@ class MainApplication: Application() {
 
     override fun onCreate() {
         super.onCreate()
-        val kits = mutableListOf<AbstractKit>();
-        kits.add(EnvSwitchKit())
-        DoraemonKit.install(this, kits)
+//        DoKit.Builder(this).customKits(listOf(EnvSwitchKit())).build()
     }
 }

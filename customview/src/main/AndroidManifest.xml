@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.barry.customview">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
 
     <application
         android:allowBackup="true"
@@ -9,7 +8,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".widget.FlowLayoutActivity"></activity>
+        <activity android:name=".widget.FlowLayoutActivity" />
         <activity android:name=".widget.FourCornerLayoutActivity" />
         <activity android:name=".widget.RandomNumViewActivity" />
         <activity android:name=".widget.WidgetShowActivity" />
@@ -28,7 +27,7 @@
         <activity android:name=".canvas.DrawARGBActivity" />
         <activity android:name=".canvas.DrawAxisActivity" />
         <activity android:name=".canvas.CanvasShowActivity" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".MainActivity" android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

@@ -3,13 +3,12 @@ plugins {
 }
 
 android {
-    compileSdkVersion 30
-    buildToolsVersion "30.0.2"
+    compileSdk 30
 
     defaultConfig {
         applicationId "com.barry.performance"
-        minSdkVersion 16
-        targetSdkVersion 30
+        minSdk 19
+        targetSdk 30
         versionCode 1
         versionName "1.0"
 
@@ -84,6 +83,7 @@ android {
         // 将指定问题（根据 id 指定）的严重级别（severity）设置为 ignore
         ignore 'TypographyQuotes'
     }
+    namespace 'com.barry.performance'
 }
 
 dependencies {
@@ -97,7 +97,7 @@ dependencies {
 
     /// 使用leakcanary
     // debugImplementation because LeakCanary should only run in debug builds.
-    debugImplementation 'com.squareup.leakcanary:leakcanary-android:2.7'
+    debugImplementation 'com.squareup.leakcanary:leakcanary-android:2.14'
     /// 使用ViewServer，连接 HierarchyViewer
     implementation 'com.github.romainguy:ViewServer:269059b4e7377b8861e20444502f6adada0d0943'
 
@@ -109,6 +109,14 @@ dependencies {
     // debugImplementation 'com.github.markzhai:blockcanary-android:1.5.0'
     // releaseImplementation 'com.github.markzhai:blockcanary-no-op:1.5.0'
 
-    debugImplementation('com.github.bzcoder:blockcanarycompat-android:0.0.4')
-    releaseImplementation('com.github.bzcoder:blockcanarycompat-android-no-op:0.0.4')
+//    debugImplementation('com.github.bzcoder:blockcanarycompat-android:0.0.4')
+//    releaseImplementation('com.github.bzcoder:blockcanarycompat-android-no-op:0.0.4')
+
+    //引入卡顿监控实现依赖库
+    implementation 'io.github.knight-zxw:blockcanary:0.0.5'
+    //引入卡顿消息通知及相关展示UI
+    implementation 'io.github.knight-zxw:blockcanary-ui:0.0.5'
+
+    // 如果你只想在debug包引入，不希望被引入release包，可以使用 debugImplementation
+    //debugImplementation 'io.github.knight-zxw:blockcanary:0.0.5'
 }

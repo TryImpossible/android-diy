@@ -5,13 +5,10 @@ plugins {
 
 android {
     compileSdkVersion rootProject.android.compileSdkVersion
-    buildToolsVersion rootProject.android.buildToolsVersion
 
     defaultConfig {
         minSdkVersion rootProject.android.minSdkVersion
         targetSdkVersion rootProject.android.targetSdkVersion
-        versionCode rootProject.android.versionCode
-        versionName rootProject.android.versionName
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles "consumer-rules.pro"
@@ -30,6 +27,7 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
+    namespace 'com.barry.baselib'
 }
 
 dependencies {
@@ -63,7 +61,7 @@ dependencies {
     api rootProject.ext.dependencies["SmartRefreshLayout"]
     api rootProject.ext.dependencies["SmartRefreshHeader"]
     api rootProject.ext.dependencies["BaseRecyclerViewAdapterHelper"]
-    api rootProject.ext.dependencies["picture_library"]
+//    api rootProject.ext.dependencies["picture_library"]
 
     api rootProject.ext.dependencies["agentweb"]
     api rootProject.ext.dependencies["agentwebfilechooser"]

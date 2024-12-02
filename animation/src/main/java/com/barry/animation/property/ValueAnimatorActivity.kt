@@ -43,7 +43,7 @@ class ValueAnimatorActivity : AppCompatActivity(), View.OnClickListener {
                     System.out.println("========getAnimatedValue=========$data")
                 }
                 animator.addListener(object : AnimatorListenerAdapter() {
-                    override fun onAnimationCancel(animation: Animator?) {
+                    override fun onAnimationCancel(animation: Animator) {
                         super.onAnimationCancel(animation)
                     }
                 })

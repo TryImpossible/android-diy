@@ -4,7 +4,10 @@ import android.app.Application;
 import android.content.Context;
 import android.os.StrictMode;
 
-import com.github.moduth.blockcanary.BlockCanary;
+//import com.github.moduth.blockcanary.BlockCanary;
+
+import blockcanary.BlockCanary;
+import blockcanary.BlockCanaryConfig;
 
 public class MainApplication extends Application {
 
@@ -20,7 +23,10 @@ public class MainApplication extends Application {
         sContext = this;
 //        initStrictMode();
 
-        BlockCanary.install(this, new AppBlockCanaryContext()).start();
+//        BlockCanary.install(this, new AppBlockCanaryContext()).start();
+
+        final BlockCanaryConfig config = BlockCanaryConfig.newBuilder().build();
+        BlockCanary.INSTANCE.install(this, config);
     }
 
     private void initStrictMode() {

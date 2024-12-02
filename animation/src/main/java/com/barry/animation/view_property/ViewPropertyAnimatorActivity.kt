@@ -45,19 +45,19 @@ class ViewPropertyAnimatorActivity : AppCompatActivity() {
                     }.setUpdateListener {
 
                     }.setListener(object : Animator.AnimatorListener {
-                        override fun onAnimationRepeat(animation: Animator?) {
+                        override fun onAnimationRepeat(animation: Animator) {
                             TODO("Not yet implemented")
                         }
 
-                        override fun onAnimationEnd(animation: Animator?) {
+                        override fun onAnimationEnd(animation: Animator) {
                             println("=========onAnimationEnd=======");
                         }
 
-                        override fun onAnimationCancel(animation: Animator?) {
+                        override fun onAnimationCancel(animation: Animator) {
                             TODO("Not yet implemented")
                         }
 
-                        override fun onAnimationStart(animation: Animator?) {
+                        override fun onAnimationStart(animation: Animator) {
                             println("=========onAnimationStart=======");
                         }
 

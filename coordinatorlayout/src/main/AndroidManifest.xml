@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.barry.coordinatorlayout">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
 
     <application
         android:allowBackup="true"
@@ -11,7 +10,7 @@
         android:theme="@style/AppTheme">
         <activity
             android:name=".zhihu.ZhiHuActivity"
-            android:label="@string/title_activity_zhi_hu"></activity>
+            android:label="@string/title_activity_zhi_hu"/>
         <activity android:name=".scrollFlags.CollapsingToolbarLayoutActivity" />
         <activity android:name=".behavior.ZoomBehaviorActivity" />
         <activity android:name=".scrollFlags.SnapActivity" />
@@ -21,7 +20,7 @@
         <activity android:name=".scrollFlags.ScrollActivity" />
         <activity android:name=".behavior.ScrollerBehaviorActivity" />
         <activity android:name=".behavior.MoveBehaviorActivity" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".MainActivity" android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

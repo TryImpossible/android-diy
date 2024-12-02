@@ -44,14 +44,14 @@ class CircularReveal2Activity : AppCompatActivity() {
             objectAnimator2.duration = 4000
             objectAnimator2.interpolator = AccelerateDecelerateInterpolator()
             objectAnimator2.addListener(object : AnimatorListenerAdapter() {
-                override fun onAnimationEnd(animation: Animator?) {
+                override fun onAnimationEnd(animation: Animator) {
                     super.onAnimationEnd(animation)
                     val intent = Intent(this@CircularReveal2Activity, CircularReveal3Activity().javaClass)
                     val activityOptionsCompat = ActivityOptionsCompat.makeSceneTransitionAnimation(this@CircularReveal2Activity, mIvFloatActionBtn, "shareElement")
                     startActivity(intent, activityOptionsCompat.toBundle())
                 }
 
-                override fun onAnimationStart(animation: Animator?) {
+                override fun onAnimationStart(animation: Animator) {
                     super.onAnimationStart(animation)
                 }
             });

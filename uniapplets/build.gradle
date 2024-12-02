@@ -7,13 +7,12 @@ def mfph = [
 ]
 
 android {
-    compileSdkVersion 30
-    buildToolsVersion "30.0.0"
+    compileSdk 30
 
     defaultConfig {
         applicationId "com.barry.uniapplets"
-        minSdkVersion 19
-        targetSdkVersion 26 //最高28最优26 设置值域超过28可能在android10以上手机出现白屏问题。
+        minSdk 19
+        targetSdk 26 //最高28最优26 设置值域超过28可能在android10以上手机出现白屏问题。
         versionCode 1
         versionName "1.0"
         multiDexEnabled true
@@ -43,6 +42,7 @@ android {
         //noCompress 'foo', 'bar'
         ignoreAssetsPattern "!.svn:!.git:.*:!CVS:!thumbs.db:!picasa.ini:!*.scc:*~"
     }
+    namespace 'com.barry.uniapplets'
 }
 
 //导入aar需要的配置

@@ -88,8 +88,8 @@ ext {
             "zxing:android-core"            : "com.google.zxing:android-core:${versions.zing}",
             "picture_library"               : "com.github.LuckSiege.PictureSelector:picture_library:${versions["picture_library"]}",
 
-            agentweb                        : "com.just.agentweb:agentweb-androidx:4.1.4",
-            agentwebfilechooser             : "com.just.agentweb:filechooser-androidx:4.1.4",
+            agentweb                        : "io.github.justson:agentweb-core:v5.1.1-androidx",
+            agentwebfilechooser             : "io.github.justson:agentweb-filechooser:v5.1.1-androidx",
 
 
             //facebook android调试
