@@ -5,6 +5,8 @@ plugins {
 //apply plugin: 'com.didi.dokit'
 
 android {
+    namespace 'com.barry.multichannel'
+
     compileSdk 34
 
     defaultConfig {
@@ -25,6 +27,10 @@ android {
             keyAlias "${KEY_ALIAS}"
             keyPassword "${KEY_PWD}"
         }
+    }
+
+    buildFeatures {
+        buildConfig true
     }
 
     buildTypes {
@@ -89,7 +95,6 @@ android {
             ]
         }
     }
-    namespace 'com.barry.multichannel'
 }
 
 //dokitExt {
@@ -135,7 +140,7 @@ android {
 
 dependencies {
 
-    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:1.6.21"
     implementation 'androidx.core:core-ktx:1.3.2'
     implementation 'androidx.appcompat:appcompat:1.2.0'
     implementation 'com.google.android.material:material:1.2.1'

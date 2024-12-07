@@ -1,8 +1,5 @@
 package com.barry.kotlin.ControlFlow
 
-import android.app.DownloadManager
-import android.app.VoiceInteractor
-
 fun main() {
     val x = 1;
 

@@ -3,28 +3,30 @@ package com.barry.eventdispatch
 import android.os.Bundle
 import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
-import kotlinx.android.synthetic.main.activity_view_group_dispatch.*
+import com.barry.eventdispatch.databinding.ActivityViewGroupDispatchBinding
 
 class ViewGroupDispatchActivity : AppCompatActivity() {
 
     private var TAG: String = ViewGroupDispatchActivity::class.java.simpleName
+    private lateinit var binding: ActivityViewGroupDispatchBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        binding = ActivityViewGroupDispatchBinding.inflate(layoutInflater)
         setContentView(R.layout.activity_view_group_dispatch)
 
         // 1.为viewgroup布局设置监听事件
-        ll_container.setOnClickListener {
+        binding.llContainer.setOnClickListener {
             Log.d(TAG, "点击了ViewGroup")
         }
 
         // 2.为按钮1设置监听事件
-        button1.setOnClickListener {
+        binding.button1.setOnClickListener {
             Log.d(TAG, "点击了button1")
         }
 
         // 3.为按钮2设置监听事件
-        button2.setOnClickListener {
+        binding.button2.setOnClickListener {
             Log.d(TAG, "点击了button2")
         }
 

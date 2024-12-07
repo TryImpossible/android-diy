@@ -7,25 +7,27 @@ import androidx.appcompat.app.AppCompatActivity
 import com.barry.coordinatorlayout.behavior.MoveBehaviorActivity
 import com.barry.coordinatorlayout.behavior.ScrollerBehaviorActivity
 import com.barry.coordinatorlayout.behavior.ZoomBehaviorActivity
+import com.barry.coordinatorlayout.databinding.ActivityMainBinding
 import com.barry.coordinatorlayout.scrollFlags.*
 import com.barry.coordinatorlayout.zhihu.ZhiHuActivity
-import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity(), View.OnClickListener {
+    private lateinit var binding: ActivityMainBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(R.layout.activity_main)
-        btn_scroll.setOnClickListener(this)
-        btn_snap.setOnClickListener(this)
-        btn_enter_always.setOnClickListener(this)
-        btn_enter_always_collapsed.setOnClickListener(this)
-        btn_exit_until_collapsed.setOnClickListener(this)
-        btn_collapsingToolbarLayout.setOnClickListener(this)
-        btn_move_behavior.setOnClickListener(this)
-        btn_scroller_behavior.setOnClickListener(this)
-        btn_zoom_behavior.setOnClickListener(this)
-        btn_zhihu.setOnClickListener(this)
+        binding.btnScroll.setOnClickListener(this)
+        binding.btnSnap.setOnClickListener(this)
+        binding.btnEnterAlways.setOnClickListener(this)
+        binding.btnEnterAlwaysCollapsed.setOnClickListener(this)
+        binding.btnExitUntilCollapsed.setOnClickListener(this)
+        binding.btnCollapsingToolbarLayout.setOnClickListener(this)
+        binding.btnMoveBehavior.setOnClickListener(this)
+        binding.btnScrollerBehavior.setOnClickListener(this)
+        binding.btnZoomBehavior.setOnClickListener(this)
+        binding.btnZhihu.setOnClickListener(this)
     }
 
     override fun onClick(v: View?) {

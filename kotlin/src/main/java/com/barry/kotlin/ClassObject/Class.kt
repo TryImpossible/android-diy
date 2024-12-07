@@ -1,8 +1,8 @@
 package com.barry.kotlin.ClassObject
 
-import android.content.Context
-import android.util.AttributeSet
-import android.view.View
+//import android.content.Context
+//import android.util.AttributeSet
+//import android.view.View
 
 fun main() {
     val orderDemo = InitOrderDemo("Barry")
@@ -74,10 +74,10 @@ class Constructors {
 open class Base(p: Int)
 class Divider(p: Int) : Base(p)
 
-class MyView : View {
-    constructor(ctx: Context) : super(ctx)
-    constructor(ctx: Context, attrs: AttributeSet) : super(ctx, attrs)
-}
+//class MyView : View {
+//    constructor(ctx: Context) : super(ctx)
+//    constructor(ctx: Context, attrs: AttributeSet) : super(ctx, attrs)
+//}
 
 /// 覆盖属性和方法
 open class Shape {

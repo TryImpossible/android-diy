@@ -14,16 +14,18 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.barry.coordinatorlayout.R
 import com.barry.coordinatorlayout.adpater.SingleTextAdapter
-import kotlinx.android.synthetic.main.fragment_home.*
+import com.barry.coordinatorlayout.databinding.FragmentHomeBinding
 
 
 class HomeFragment : Fragment() {
+    private lateinit var binding: FragmentHomeBinding
 
     override fun onCreateView(
             inflater: LayoutInflater,
             container: ViewGroup?,
             savedInstanceState: Bundle?
     ): View? {
+        binding = FragmentHomeBinding.inflate(layoutInflater)
         return inflater.inflate(R.layout.fragment_home, container, false)
     }
 
@@ -37,9 +39,9 @@ class HomeFragment : Fragment() {
         val data = List(100, { it -> "我是第${it + 1}个Item" })
         val adapter = SingleTextAdapter(requireContext(), data)
 
-        recycler_view.adapter = adapter
-        recycler_view.layoutManager = LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false)
-        recycler_view.addItemDecoration(object : RecyclerView.ItemDecoration() {
+        binding.recyclerView.adapter = adapter
+        binding.recyclerView.layoutManager = LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false)
+        binding.recyclerView.addItemDecoration(object : RecyclerView.ItemDecoration() {
             override fun getItemOffsets(outRect: Rect, view: View, parent: RecyclerView, state: RecyclerView.State) {
                 super.getItemOffsets(outRect, view, parent, state)
                 outRect.bottom = 2
@@ -57,10 +59,10 @@ class HomeFragment : Fragment() {
             }
         })
 
-        refresh_layout.setOnRefreshListener {
+        binding.refreshLayout.setOnRefreshListener {
             Handler().postDelayed({
                 adapter.notifyDataSetChanged()
-                refresh_layout.isRefreshing = false
+                binding.refreshLayout.isRefreshing = false
             }, 1000)
         }
 

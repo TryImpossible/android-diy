@@ -80,7 +80,7 @@ class LayoutAnimationActivity : AppCompatActivity() {
         }
 
         override fun getItemCount(): Int {
-            return list?.size
+            return list.size
         }
 
         override fun onBindViewHolder(holder: MyViewHolder, position: Int) {

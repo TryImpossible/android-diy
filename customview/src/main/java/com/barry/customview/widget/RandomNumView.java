@@ -17,7 +17,7 @@ import com.barry.customview.R;
 
 import java.util.Random;
 
-class RandomNumView extends View {
+public class RandomNumView extends View {
 
     private Context mContext;
     private String mText;

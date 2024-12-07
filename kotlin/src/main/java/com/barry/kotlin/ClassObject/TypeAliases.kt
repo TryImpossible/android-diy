@@ -1,6 +1,5 @@
 package com.barry.kotlin.ClassObject
 
-import android.net.Network
 import java.io.File
 
 fun main() {
@@ -13,7 +12,7 @@ fun main() {
 }
 
 /// 例如，通常缩减集合类型是很有吸引力的
-typealias NodeSet = Set<Network>;
+typealias NodeSet = Set<File>;
 
 typealias FileTable<K> = MutableMap<K, MutableList<File>>
 
