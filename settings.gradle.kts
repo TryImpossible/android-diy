@@ -1,5 +1,6 @@
 pluginManagement {
     repositories {
+        maven(url = "$rootDir/bytecode/repos/releases")
         google {
             content {
                 includeGroupByRegex("com\\.android.*")
@@ -42,3 +43,5 @@ include(":sqlite")
 include(":contentprovider")
 include(":designpattern")
 include(":algorithm")
+include(":bytecode_app")
+include(":bytecode")
