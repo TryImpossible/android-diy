@@ -31,6 +31,9 @@ class MainActivity : AppCompatActivity() {
         findViewById<Button>(R.id.btn_translate).setOnClickListener {
             startActivity(Intent(this, TranslateActivity().javaClass))
         }
+        findViewById<Button>(R.id.btn_translate_direction).setOnClickListener {
+            startActivity(Intent(this, TranslateDirectionActivity().javaClass))
+        }
         findViewById<Button>(R.id.btn_alpha).setOnClickListener {
             startActivity(Intent(this, AlphaActivity().javaClass))
         }
