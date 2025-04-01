@@ -9,4 +9,5 @@ java {
 
 dependencies {
     testImplementation(libs.junit)
+    implementation("org.openjdk.jol:jol-core:0.9")
 }
