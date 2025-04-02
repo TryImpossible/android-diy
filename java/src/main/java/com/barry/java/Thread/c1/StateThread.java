@@ -58,8 +58,9 @@ public class StateThread {
             table.use();
         }, "s2");
         student1.start();
-        TimeUnit.SECONDS.sleep(1);
+
         student2.start();
+        TimeUnit.SECONDS.sleep(1);
         System.out.println(student2.getState());
     }
 
