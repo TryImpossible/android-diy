@@ -83,19 +83,19 @@ fun somethingUsefulTwoAsync() = GlobalScope.async {
 //    println("Completed in $time ms")
 //}
 
-/// 使用 async 的结构化并发
-fun main(): Unit = runBlocking {
-    val time = measureTimeMillis {
-        println("The answer is ${concurrentSum()}")
-    }
-    println("Completed in $time ms")
-
-    try {
-        failedConcurrentSum()
-    } catch (e: ArithmeticException) {
-        println("Computation failed with ArithmeticException")
-    }
-}
+///// 使用 async 的结构化并发
+//fun main(): Unit = runBlocking {
+//    val time = measureTimeMillis {
+//        println("The answer is ${concurrentSum()}")
+//    }
+//    println("Completed in $time ms")
+//
+//    try {
+//        failedConcurrentSum()
+//    } catch (e: ArithmeticException) {
+//        println("Computation failed with ArithmeticException")
+//    }
+//}
 
 suspend fun concurrentSum(): Int = coroutineScope {
     val one = async { doSomethingUsefulOne() }
