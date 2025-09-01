@@ -1,0 +1,122 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "com.barry.bytecode",
+    "module": "ByteCodePlugin",
+    "version": "1.0.0",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "8.7"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.environment": "standard-jvm",
+        "org.gradle.jvm.version": 11,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api",
+        "org.jetbrains.kotlin.platform.type": "jvm"
+      },
+      "dependencies": [
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib-jdk8",
+          "version": {
+            "requires": "1.9.0"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "ByteCodePlugin-1.0.0.jar",
+          "url": "ByteCodePlugin-1.0.0.jar",
+          "size": 2109,
+          "sha512": "ce0b82de4b567d4850a4221a56493bf70cdd82b46bd5daa3a1a29fc0189815467b647ea33e3cc05a9c100c5c8860052cc4f72e6758ea1955e0d93f6ce458fb00",
+          "sha256": "88b8cb24a4c5fae258377bada29a45405ed6cc97652c7d7797bdc30f03ce28d6",
+          "sha1": "6d09825f4543a920c847b3428547905be05ca81c",
+          "md5": "65d7222206d2c824c80211e3fde94bfd"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.environment": "standard-jvm",
+        "org.gradle.jvm.version": 11,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime",
+        "org.jetbrains.kotlin.platform.type": "jvm"
+      },
+      "dependencies": [
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib-jdk8",
+          "version": {
+            "requires": "1.9.0"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "ByteCodePlugin-1.0.0.jar",
+          "url": "ByteCodePlugin-1.0.0.jar",
+          "size": 2109,
+          "sha512": "ce0b82de4b567d4850a4221a56493bf70cdd82b46bd5daa3a1a29fc0189815467b647ea33e3cc05a9c100c5c8860052cc4f72e6758ea1955e0d93f6ce458fb00",
+          "sha256": "88b8cb24a4c5fae258377bada29a45405ed6cc97652c7d7797bdc30f03ce28d6",
+          "sha1": "6d09825f4543a920c847b3428547905be05ca81c",
+          "md5": "65d7222206d2c824c80211e3fde94bfd"
+        }
+      ]
+    },
+    {
+      "name": "javadocElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "javadoc",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "ByteCodePlugin-1.0.0-javadoc.jar",
+          "url": "ByteCodePlugin-1.0.0-javadoc.jar",
+          "size": 261,
+          "sha512": "f0aba878800e0ef4630502d192bfb426db0651babc185bed7a6cf6156077dbf3f8ee7b8454eea4e870382c038ead3ceae67a73a60dc13b354ae995f870a2763a",
+          "sha256": "47840ea553f01486c6314eb76f29d7ef46a9842fd75bddbed7aa35587cf17154",
+          "sha1": "fda873bb292e76c4dc06f0d5369884aa778d4a8b",
+          "md5": "1af380b4c55cd52ee9f8fadc37880772"
+        }
+      ]
+    },
+    {
+      "name": "sourcesElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "ByteCodePlugin-1.0.0-sources.jar",
+          "url": "ByteCodePlugin-1.0.0-sources.jar",
+          "size": 911,
+          "sha512": "6cb009c3d1926aa653868a35f680fdf5fc68eceff852b213ef7c63a9c01f5ac63dc8ed7f773afb84c3ce05a663838f58fbb9ea7e2533660d17e5c522ae03647f",
+          "sha256": "23bbc00c1bcb8439dd6ccfc53459ae7c834411c0e368fc28eb73c0b091a8246e",
+          "sha1": "1406068314d4488f51bc7d49c001e7590e80fc46",
+          "md5": "78b901f5a9654f9738c0e9bfdc058e4d"
+        }
+      ]
+    }
+  ]
+}

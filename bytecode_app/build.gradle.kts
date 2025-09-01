@@ -3,6 +3,7 @@ plugins {
     alias(libs.plugins.kotlin.android)
     id("greeting-plugin")
     id("com.barry.bytecode.buildSrc")
+    id("com.barry.bytecode.standardAlonePlugin")
 }
 
 apply(from = "other.gradle.kts")

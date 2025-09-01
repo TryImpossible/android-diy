@@ -18,12 +18,16 @@ kotlin {
 
 gradlePlugin {
     plugins {
-        create("MyPlugin") {
-            id = "com.barry.bytecode"
-            implementationClass = "com.barry.bytecode.MyPlugin"
+        create("StandardAlonePlugin") {
+            id = "com.barry.bytecode.standardAlonePlugin"
+            implementationClass = "com.barry.bytecode.StandardAlonePlugin"
         }
     }
 }
+
+// 1. 在需要调试的项目中，引入 id("com.barry.bytecode") 插件
+// 2. 以debug模式启动配置的"debug bytecode gradle plugin"选项
+// 3. 执行gradle命令：./gradlew :bytecode_app:build -Dorg.gradle.debug=true --no-daemon
 
 java {
     withJavadocJar()
@@ -32,9 +36,9 @@ java {
 
 publishing {
     publications {
-        create<MavenPublication>("MyPlugin") {
+        create<MavenPublication>("ByteCodePlugin") {
             groupId = "com.barry.bytecode"
-            artifactId = "MyPlugin"
+            artifactId = "ByteCodePlugin"
             version = "1.0.0"
 
             from(components["java"])
@@ -79,7 +83,7 @@ publishing {
 
     repositories {
         maven {
-            name = "myRepo"
+            name = "localRepo"
             // change URLs to point to your repos, e.g. http://my.org/repo
 //            val releasesRepoUrl = uri(layout.buildDirectory.dir("repos/releases"))
 //            val snapshotsRepoUrl = uri(layout.buildDirectory.dir("repos/snapshots"))

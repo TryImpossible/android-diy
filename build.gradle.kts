@@ -1,7 +1,7 @@
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
 buildscript {
     dependencies {
-        classpath("com.barry.bytecode:MyPlugin:1.0.0")
+        classpath("com.barry.bytecode:ByteCodePlugin:1.0.0")
     }
 }
 
