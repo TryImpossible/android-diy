@@ -16,11 +16,27 @@ kotlin {
     }
 }
 
+dependencies {
+    implementation("org.jetbrains:annotations:26.0.2")
+    // 必须添加：Gradle和Android Gradle Plugin的API，这样我们才能调用Transform等类
+    implementation("com.android.tools.build:gradle:8.6.0") // 版本号请与你项目根目录的build.gradle中使用的AGP版本保持一致！
+    // 可选：用于操作字节码的库，如ASM、Javassist等。这里以ASM为例，它是功能最强大、最常用的字节码操作框架。
+    implementation("org.ow2.asm:asm:9.8")
+    implementation("org.ow2.asm:asm-commons:9.8")
+    implementation("org.ow2.asm:asm-util:9.8")
+}
+
 gradlePlugin {
     plugins {
         create("StandardAlonePlugin") {
             id = "com.barry.bytecode.standardAlonePlugin"
             implementationClass = "com.barry.bytecode.StandardAlonePlugin"
+        }
+    }
+    plugins {
+        create("FixThirdPartyLibPlugin") {
+            id = "com.barry.bytecode.fixThirdPartyLibPlugin"
+            implementationClass = "com.barry.bytecode.thirdparty.FixThirdPartyLibPlugin"
         }
     }
 }

@@ -30,7 +30,7 @@
           "group": "org.jetbrains.kotlin",
           "module": "kotlin-stdlib-jdk8",
           "version": {
-            "requires": "1.9.0"
+            "requires": "1.9.20"
           }
         }
       ],
@@ -38,11 +38,11 @@
         {
           "name": "ByteCodePlugin-1.0.0.jar",
           "url": "ByteCodePlugin-1.0.0.jar",
-          "size": 2109,
-          "sha512": "ce0b82de4b567d4850a4221a56493bf70cdd82b46bd5daa3a1a29fc0189815467b647ea33e3cc05a9c100c5c8860052cc4f72e6758ea1955e0d93f6ce458fb00",
-          "sha256": "88b8cb24a4c5fae258377bada29a45405ed6cc97652c7d7797bdc30f03ce28d6",
-          "sha1": "6d09825f4543a920c847b3428547905be05ca81c",
-          "md5": "65d7222206d2c824c80211e3fde94bfd"
+          "size": 7702,
+          "sha512": "24f5d377576ba7e8819b1b7944013dac7cc041bd76708348c33881c990d7fe704f5b3e2fbdcc98754a63c8cef1f0bd9d4d439d258eeb973a19587b4091951703",
+          "sha256": "fc96a7237fb3cc045959f7bd8f2990a9fd59a4e9280ab506a09da9217eeb3021",
+          "sha1": "9d704cfb893528e738e9369e6da367b41f60fdd2",
+          "md5": "b88f512bd5829ab30a9370355f82ea70"
         }
       ]
     },
@@ -59,10 +59,45 @@
       },
       "dependencies": [
         {
+          "group": "org.jetbrains",
+          "module": "annotations",
+          "version": {
+            "requires": "26.0.2"
+          }
+        },
+        {
+          "group": "com.android.tools.build",
+          "module": "gradle",
+          "version": {
+            "requires": "8.6.0"
+          }
+        },
+        {
+          "group": "org.ow2.asm",
+          "module": "asm",
+          "version": {
+            "requires": "9.8"
+          }
+        },
+        {
+          "group": "org.ow2.asm",
+          "module": "asm-commons",
+          "version": {
+            "requires": "9.8"
+          }
+        },
+        {
+          "group": "org.ow2.asm",
+          "module": "asm-util",
+          "version": {
+            "requires": "9.8"
+          }
+        },
+        {
           "group": "org.jetbrains.kotlin",
           "module": "kotlin-stdlib-jdk8",
           "version": {
-            "requires": "1.9.0"
+            "requires": "1.9.20"
           }
         }
       ],
@@ -70,11 +105,11 @@
         {
           "name": "ByteCodePlugin-1.0.0.jar",
           "url": "ByteCodePlugin-1.0.0.jar",
-          "size": 2109,
-          "sha512": "ce0b82de4b567d4850a4221a56493bf70cdd82b46bd5daa3a1a29fc0189815467b647ea33e3cc05a9c100c5c8860052cc4f72e6758ea1955e0d93f6ce458fb00",
-          "sha256": "88b8cb24a4c5fae258377bada29a45405ed6cc97652c7d7797bdc30f03ce28d6",
-          "sha1": "6d09825f4543a920c847b3428547905be05ca81c",
-          "md5": "65d7222206d2c824c80211e3fde94bfd"
+          "size": 7702,
+          "sha512": "24f5d377576ba7e8819b1b7944013dac7cc041bd76708348c33881c990d7fe704f5b3e2fbdcc98754a63c8cef1f0bd9d4d439d258eeb973a19587b4091951703",
+          "sha256": "fc96a7237fb3cc045959f7bd8f2990a9fd59a4e9280ab506a09da9217eeb3021",
+          "sha1": "9d704cfb893528e738e9369e6da367b41f60fdd2",
+          "md5": "b88f512bd5829ab30a9370355f82ea70"
         }
       ]
     },
@@ -90,11 +125,11 @@
         {
           "name": "ByteCodePlugin-1.0.0-javadoc.jar",
           "url": "ByteCodePlugin-1.0.0-javadoc.jar",
-          "size": 261,
-          "sha512": "f0aba878800e0ef4630502d192bfb426db0651babc185bed7a6cf6156077dbf3f8ee7b8454eea4e870382c038ead3ceae67a73a60dc13b354ae995f870a2763a",
-          "sha256": "47840ea553f01486c6314eb76f29d7ef46a9842fd75bddbed7aa35587cf17154",
-          "sha1": "fda873bb292e76c4dc06f0d5369884aa778d4a8b",
-          "md5": "1af380b4c55cd52ee9f8fadc37880772"
+          "size": 86648,
+          "sha512": "63b77161280ee56a0777f5233c7e9d36279ed1e260a5b1fa3ed721a97a2424105f56609b6797e2a33274d1990b446c4ccd232c6c33141e268e6e6edfd4ea08ca",
+          "sha256": "93529066e581b172a5ffafcb4978bcd4c1c659e34beec17f397532b4cf25c362",
+          "sha1": "be92185b29cd1817febfbf7fae4cfd1a186f62d1",
+          "md5": "c81428bdcd8c6f77ad1e2addcf4747b2"
         }
       ]
     },
@@ -110,11 +145,11 @@
         {
           "name": "ByteCodePlugin-1.0.0-sources.jar",
           "url": "ByteCodePlugin-1.0.0-sources.jar",
-          "size": 911,
-          "sha512": "6cb009c3d1926aa653868a35f680fdf5fc68eceff852b213ef7c63a9c01f5ac63dc8ed7f773afb84c3ce05a663838f58fbb9ea7e2533660d17e5c522ae03647f",
-          "sha256": "23bbc00c1bcb8439dd6ccfc53459ae7c834411c0e368fc28eb73c0b091a8246e",
-          "sha1": "1406068314d4488f51bc7d49c001e7590e80fc46",
-          "md5": "78b901f5a9654f9738c0e9bfdc058e4d"
+          "size": 6742,
+          "sha512": "78adca1dae4f465483ca3d7ea2dc56e9f1be0573f120e64a68843d7f20d2ad3ff12526d7ebca541a07ccadec7cd42efdbadcd07c04e47d920826d15c35160de7",
+          "sha256": "bdf88c5f4658ab535d48a0f9232218453efddbda3152096634b8377b285ab74d",
+          "sha1": "c3657307894ce2f72fe7cf36d424024ef46f99ed",
+          "md5": "356046e5bcff606a462c406663d21252"
         }
       ]
     }

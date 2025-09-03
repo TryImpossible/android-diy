@@ -1,9 +1,20 @@
+//rootProject.allprojects {
+//    repositories {
+//        google()
+//        mavenCentral()
+//        flatDir {
+//            dirs(project(":bytecode_app").file("libs"))
+//        }
+//    }
+//}
+
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
     id("greeting-plugin")
     id("com.barry.bytecode.buildSrc")
     id("com.barry.bytecode.standardAlonePlugin")
+    id("com.barry.bytecode.fixThirdPartyLibPlugin")
 }
 
 apply(from = "other.gradle.kts")
@@ -41,6 +52,17 @@ android {
 }
 
 dependencies {
+    implementation(files("libs/third-party-lib-release.aar"))
+//    implementation(":third-party-lib-release@aar")
+
+//    // 本地文件
+//    implementation(files("libs/third-party-lib-release.jar"))
+//    // 模块依赖
+//    implementation(project(":bytecode_app"))
+//    // 文件树
+//    implementation(fileTree(mapOf("dir" to "libs", "include" to listOf("*.jar"))))
+//    // map格式
+//    implementation(mapOf("name" to "third-party-lib-release", "ext" to "aar"))
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)

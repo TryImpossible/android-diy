@@ -19,6 +19,9 @@ dependencyResolutionManagement {
         google()
         mavenCentral()
         maven (url = "https://jitpack.io")
+        flatDir {
+            dirs("bytecode_app/libs")
+        }
     }
 }
 
